@@ -121,4 +121,5 @@ s = "10[a]", return "aaaaaaaaaa".
 
 ## More
 
-- [Stack and Queue, Why?](https://stackoverflow.com/questions/2074970/stack-and-queue-why): DFS + stack, BFS + queue	
+- [Stack and Queue, Why?](https://stackoverflow.com/questions/2074970/stack-and-queue-why): DFS + stack, BFS + queue
+- [Tianyu: next greater](https://github.com/davidxk/Algorithm-Implementations/blob/dev/stack/py/next_greater.py)	
