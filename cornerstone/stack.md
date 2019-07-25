@@ -1,7 +1,11 @@
-# Stack 
-
-![stack](https://i.imgur.com/W0LDr8g.png)
-
+<h1 align="center">
+<br>
+  <a href="https://www.wikiwand.com/en/Stack_(abstract_data_type)"><img src="https://i.imgur.com/O6tbQ6f.png" alt="Stack" width=200"></a>
+  <br>
+    <br>
+  Stack
+  <br><br>
+</h1>
 
 > when to pop and push?
 > 
