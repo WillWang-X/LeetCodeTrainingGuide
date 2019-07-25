@@ -24,11 +24,11 @@ Consider augmenting the basic stack or queue data structure to support additiona
 ## 典型应用
 
 
-- LIFO: [901](https://leetcode.com/problems/online-stock-span/)
-- **save for later**: parsing, [394](https://leetcode.com/problems/decode-string/)
-- **special order**: discrete ascending or descending, [84](https://leetcode.com/problems/largest-rectangle-in-histogram/)
-- **next greater**: [496](https://leetcode.com/problems/next-greater-element-i/)
-- top-down (DFS-style): tree, [173](https://leetcode.com/problems/binary-search-tree-iterator/)
+- LIFO: [901](https://leetcode.com/problems/online-stock-span/) [how]
+- **save for later**: parsing, [394](https://leetcode.com/problems/decode-string/)  [why]
+- **special order**: discrete ascending or descending, [84](https://leetcode.com/problems/largest-rectangle-in-histogram/) [what]
+- **next greater**: [496](https://leetcode.com/problems/next-greater-element-i/)  [when]
+- top-down (DFS-style): tree, [173](https://leetcode.com/problems/binary-search-tree-iterator/)  [who]
 
 ## 最佳实践
 
