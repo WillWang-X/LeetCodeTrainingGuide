@@ -20,6 +20,10 @@
 * [Fast Autocomplete Search for Your Website](https://24ways.org/2018/fast-autocomplete-search-for-your-website/): build a search engine that’s fast enough to support autocomplete (a.k.a. typeahead) search queries and can be hosted for free. 
 * [dumb-crypto](https://github.com/indutny/dumb-crypto): Dumb, but easily verifiable implementations of crypto algorithms
 
+## 数据结构 
+
+- [Of stuff tantivy does differently - the stacker](https://fulmicoton.com/posts/tantivy-stacker/): A nice datastructure I use in tantivy (a search engine)
+
 
 ## 思维方式 from 现实
 
