@@ -7,7 +7,7 @@
 
 ## 算法应用
 
-* [InvaderZ](https://github.com/victorqribeiro/invaderz) : is like the game Space Invaders, except InvaderZ uses the **genetic algorithm** to mutate the invaders as you play.
+1. [InvaderZ](https://github.com/victorqribeiro/invaderz) : is like the game Space Invaders, except InvaderZ uses the **genetic algorithm** to mutate the invaders as you play.
 * [Writing An Hadoop MapReduce Program In Python](https://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/): Divide and conquer 
 * [ZIP压缩算法详细分析及解压实例解释](https://www.cnblogs.com/esingchan/p/3958962.html): 使用通俗的语言介绍ZIP算法
 * [A Tour of The Top 10 Algorithms for Machine Learning Newbies](https://towardsdatascience.com/a-tour-of-the-top-10-algorithms-for-machine-learning-newbies-dde4edffae11): 本文介绍了机器学习最基本的十种算法，比如线性回归、朴素贝叶斯、KNN聚合等。
@@ -19,6 +19,7 @@
 * [计算机科学中最重要的 32 个算法](https://www3.risc.jku.at/people/ckoutsch/stuff/e_algorithms.html): 奥地利符号计算研究所（Research Institute for Symbolic Computation，简称 RISC）的 Christoph Koutschan 博士在自己的页面上发布了一篇文章，提到他做了一个调查，参与者大多数是计算机科学家，他请这些科学家投票选出最重要的算法。
 * [Fast Autocomplete Search for Your Website](https://24ways.org/2018/fast-autocomplete-search-for-your-website/): build a search engine that’s fast enough to support autocomplete (a.k.a. typeahead) search queries and can be hosted for free. 
 * [dumb-crypto](https://github.com/indutny/dumb-crypto): Dumb, but easily verifiable implementations of crypto algorithms
+* [Genetic algorithms Explained: A python Implementation](https://hackernoon.com/genetic-algorithms-explained-a-python-implementation-sd4w374i): [genetic-drawing](https://hackernoon.com/genetic-algorithms-explained-a-python-implementation-sd4w374i)
 
 ## 数据结构 
 
