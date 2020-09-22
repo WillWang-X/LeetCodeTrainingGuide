@@ -72,7 +72,7 @@ def get_sum(a, b):
 
 ``` python
 def missing_number(nums):
-	res = 0 
+	res = len(nums)
 	for i, num in enumerate(nums):
 		res ^= i ^ num
 	return res
