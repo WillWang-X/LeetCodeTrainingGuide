@@ -2,9 +2,9 @@
 
 source: [wiki](https://www.wikiwand.com/en/Algorithm#/By_field_of_study)
 
-Every field of science has its own problems and needs efficient algorithms. Related problems in one field are often studied together.
+Every field of science has its **own problems** and needs **efficient** algorithms. Related problems in one field are often studied together.
 
-Fields tend to overlap with each other, and algorithm advances in one field may improve those of other, sometimes completely unrelated, fields. For example, dynamic programming was invented for optimization of resource consumption in industry but is now used in solving a broad range of problems in many fields.
+Fields tend to overlap with each other, and algorithm advances in one field may improve those of other, sometimes completely unrelated, fields. For example, **dynamic programming** was invented for optimization of resource consumption in industry but is now used in solving a broad range of problems in many fields.
 
 | Field            | Algorithms   |
 | ----------          | ------------ |
