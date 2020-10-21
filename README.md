@@ -34,7 +34,7 @@ There are 4 maps, including problem types, data strccture, design techniques, wa
 1. 👾👻👹: easy, medium, hard typical questions
 1. 🏷: tags related to the keyword
 1. 📝: The Basic Description
-1. ⚔️: Typical applications
+1. ⚔️: Typical use cases
 1. 🤺: Best practices
 1. 😈: More interesting questions
 1. 💬: Explanation exmaples
