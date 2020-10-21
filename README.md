@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <a href="https://github.com/willwang-x/algorithms-with-illustrations"><img src="https://i.imgur.com/LHa5zz2.png"Aogrithms with Illustration" width=200"></a>
+  <img src="https://i.imgur.com/rI7IO3E.png"Aogrithms with Illustration" width=200">
   <br>
     <br>
   Algorithms <sup style="font-size: 20%; vertical-align: top;">since 2018
