@@ -73,4 +73,4 @@ def search(nums: List[int], target: int) -> int:
 
 ## Thanks 
 
-- [python API: bisect](https://repl.it/@WillWang42/8-6-bisect)
+*  [python API: bisect](https://repl.it/@WillWang42/8-6-bisect)
