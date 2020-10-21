@@ -14,7 +14,7 @@
 
 ## Why 
 
-> My personal journey to be an algorithm master
+> My journey to be an algorithm master
 
 There are so many books, websites, videos and repositories about algorithm. Why do you create a new one? Because they are not what I want. So what is your need?
 
