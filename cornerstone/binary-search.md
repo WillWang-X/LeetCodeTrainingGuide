@@ -28,7 +28,7 @@ Consider **time/space tradeoffs**, such as making multiple passes through the da
 
 ## 🤺3. Best Practices
 
-### Search insert position
+#### Search insert position
 
 * x < `target` for x in nums[:**`i`**]<br><img src="https://i.imgur.com/uIf4WS9.png" alt="shortcuts" width="42%"/>
 
@@ -36,6 +36,15 @@ Consider **time/space tradeoffs**, such as making multiple passes through the da
 def get_insert_pos(nums: List[int], target: int) -> int:
     return bisect.bisect_left(nums, target)
 ```
+
+#### Get the [middle](https://repl.it/@WillWang42/get-the-middle) 
+
+``` python
+def get_middle(left: int, right: int) -> int:
+    return (left + right) >> 1
+```
+
+
 
 
 ## 😈4. More training
