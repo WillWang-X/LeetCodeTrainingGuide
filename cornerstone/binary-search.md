@@ -56,3 +56,12 @@ def get_insert_pos(nums: List[int], target: int) -> int:
 **Q: Is there are API that do binary search without building wheels by yourself?**
 
 A: [Python API: bisect](https://repl.it/@WillWang42/8-6-bisect)
+
+**Q: What are the pitfalls in implementing binary search?**
+
+A: Here are some [I can think of](https://stackoverflow.com/questions/504335/what-are-the-pitfalls-in-implementing-binary-search):
+
+* **Off-by-one errors**, when determining the boundary of the next interval
+* **Handling of duplicate items**, if you are suppose to return the first equal item in the array but instead returned a subsequent equal item
+* **Numerical underflows/overflows** when computing indices, with huge arrays
+* **Recursive vs non-recursive implementation**, a design choice you should consider
