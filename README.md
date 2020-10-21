@@ -3,8 +3,8 @@
   <a href="https://github.com/willwang-x/algorithms-with-illustrations"><img src="https://i.imgur.com/LHa5zz2.png"Aogrithms with Illustration" width=200"></a>
   <br>
     <br>
-  Algorithms with Illustrations
-  <br><br>
+  Algorithms <sup style="font-size: 20%; vertical-align: top;">since 2018
+</sup>  <br><br>
 </h1>
 
 > When you understand something, then you can find the math to express that understanding. The math doesn't provide the **understanding**. The purpose of computing is **insight**, not numbers. The only real valuable thing is **intuition**.  
