@@ -27,11 +27,12 @@ There are so many books, websites, videos and repositories about algorithm. Why 
 
 > problem -> (data structure, design techniques) -> ways of thinking
 
-There are 4 maps, including problem types, data strccture, design techniques, ways of thinking. For each keyword on those maps, there are **9** sections shown as below:
+There are 4 maps, including problem types, data strccture, design techniques, ways of thinking. For each keyword on those maps, there are **10** sections shown as below:
 
-1. 🌠: One gif/pic that shows the intuition behind the keyword
+1. 🌠: One gif/pic that shows the intuition behind the keyword🔑
 1. 🌟: One typical question
 1. 👾👻👹: easy, medium, hard typical questions
+1. 🏷: tags related to the keyword
 1. 📝: The Basic Description
 1. ⚔️: Typical applications
 1. 🤺: Best practices
@@ -39,3 +40,8 @@ There are 4 maps, including problem types, data strccture, design techniques, wa
 1. 💬: Explanation exmaples
 1. ⚠️: FAQs
 
+e.g. 
+
+| key 🔑 | typical problems🌟 | intuition 🌠 | tags 🏷 |
+| :--------: | :---------: | :----------: | :---------: |
+| [Binary Search](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/binary-search.md) | 🌟[33. Search in **Rotated** **Sorted** Array](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/) <br><br> 👾[35 insert](https://leetcode.com/problems/search-insert-position/), 👻[300 longest](https://leetcode.com/problems/longest-increasing-subsequence/), 👹[354 envelopes](https://leetcode.com/problems/russian-doll-envelopes/)  |<img src="https://i.imgur.com/7Wh8Jm3.gif" alt="binary search" width="200"/>  | 减治系列 <br> 搜索系列 |
