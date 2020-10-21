@@ -1,9 +1,9 @@
 <h1 align="center">
 <br>
-  <a href="https://github.com/willwang-x/algorithms-with-illustrations"><img src="https://i.imgur.com/8YKuHaC.png" alt="Aogrithms with Illustration" width=200"></a>
+  <a href="https://github.com/willwang-x/algorithms-with-illustrations"><img src="https://i.imgur.com/LHa5zz2.png"Aogrithms with Illustration" width=200"></a>
   <br>
     <br>
-  Aogrithms with Illustration
+  Algorithms with Illustrations
   <br><br>
 </h1>
 
@@ -12,9 +12,30 @@
 > by *Leslie Lamport & Richard Hamming & Albert Einstein*
 
 
-## Features
+## Why 
 
-- **Insight**: intuition, connect, debug
-- **Core**: basics, application, best practice, typical problems, explanation, Q&A
-- **Map**: problem type -> (data structure, design techniques) -> ways of thinking
+> My personal journey to be an algorithm master
+
+There are so many books, websites, videos and repositories about algorithm. Why do you create a new one? Because they are not what I want. So what is your need?
+
+* The **intuition** behind each typical algorithms
+* The **basics** and **big picture** about problems type and related data structure & algorithms
+* The **ways of thinking** that can be transferred to other areas
+* The prospect of solving the **problem** by myself, which is the most important 
+
+## What 
+
+> problem -> (data structure, design techniques) -> ways of thinking
+
+There are 4 maps, including problem types, data strccture, design techniques, ways of thinking. For each keyword on those map, there **9** sections as shown below:
+
+1. 🌠: One gif/pic that shows the intuition behind the keyword
+1. 🌟: One typical question
+1. 👾👻👹: easy, medium, hard typical questions
+1. 📝: Basics
+1. ⚔️: Typical application
+1. 🤺: Best practice
+1. 😈: More interesting questions
+1. 💬: Explanation exmaple
+1. ⚠️: Q&A
 
