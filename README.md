@@ -27,7 +27,7 @@ There are so many books, websites, videos and repositories about algorithm. Why 
 
 > problem -> (data structure, design techniques) -> ways of thinking
 
-There are 4 maps, including problem types, data strccture, design techniques, ways of thinking. For each keyword on those maps, there **9** sections as shown below:
+There are 4 maps, including problem types, data strccture, design techniques, ways of thinking. For each keyword on those maps, there **9** sections shown as below:
 
 1. 🌠: One gif/pic that shows the intuition behind the keyword
 1. 🌟: One typical question
