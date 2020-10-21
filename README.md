@@ -30,14 +30,14 @@ There are so many books, websites, videos and repositories about algorithm. Why 
 There are 4 maps, including problem types, data strccture, design techniques, ways of thinking. For each keyword on those maps, there are **10** sections shown as below:
 
 1. 🌠: One gif/pic that shows the intuition behind the keyword🔑
-1. 🌟: One typical question
-1. 👾👻👹: easy, medium, hard typical questions
+1. 🌟: One typical problem
+1. 👾👻👹: easy, medium, hard typical problems
 1. 🏷: tags related to the keyword
 1. 📝: The Basic Description
 1. ⚔️: Typical use cases
 1. 🤺: Best practices
-1. 😈: More interesting questions
-1. 💬: Explanation exmaples
+1. 😈: More training
+1. 💬: Explanations
 1. ⚠️: FAQs
 
 e.g. 
