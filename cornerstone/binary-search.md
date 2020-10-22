@@ -39,22 +39,36 @@ def get_insert_pos(nums: List[int], target: int) -> int:
 
 #### Get the [middle](https://repl.it/@WillWang42/get-the-middle) 
 
+fast and safe way
+
 ``` python
 def get_middle(left: int, right: int) -> int:
     return (left + right) >> 1
 ```
 
+#### Sort 
+
+Sometimes, we need define **sort** before binary search 
+
+e.g. [[4,5], [4,7], [1,2]] -> [[1,2], [4,7], [4,5]]
+
+``` python 
+def sort(self, nums: List[List[int]]) -> nums: List[List[int]]:
+    f = lambda x, y: x[0] - y[0] if x[0] != y[0] else y[1] - x[1]
+    nums.sort(key = functools.cmp_to_key(f))
+    return nums
+```
 
 
 
 ## 😈4. More training
 
 
-* [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) 🌟
-* [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) 👾
-* [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)👻
-* [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)👹
-* [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+1. [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) 🌟
+1. [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) 👾
+1. [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)👻
+1. [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)👹
+1. [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 
 ## 💬5. Explanation 
 
