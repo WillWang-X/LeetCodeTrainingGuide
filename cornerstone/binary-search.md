@@ -23,8 +23,10 @@ Consider **time/space tradeoffs**, such as making multiple passes through the da
 
 ## ⚔️2. Use cases
 
-* Search in sorted array: [35](https://leetcode.com/problems/search-insert-position/) 
-* Identify the sorted part: [33](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+* Search **answer**: [35](https://leetcode.com/problems/search-insert-position/) 
+* Simple binary search: [74](https://leetcode.com/problems/search-a-2d-matrix/)
+* Search step **simulation**: [50](https://leetcode.com/problems/powx-n/)
+* Sort **modification**: [33](https://leetcode.com/problems/search-in-rotated-sorted-array/), [4](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 ## 🤺3. Best Practices
 
