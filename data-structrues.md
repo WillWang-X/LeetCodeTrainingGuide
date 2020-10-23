@@ -4,7 +4,7 @@
   <img src="https://i.imgur.com/7ZBfuh5.png" alt="data structure from wiki" width=42%">
   </a>
   <br><br>
-Data Structure
+Data Structures
   <br><br>
 </h1>
 
@@ -14,7 +14,6 @@ Data Structure
 
 Here are some notable [data structures](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/data-structure.md): 
 
-* Bit, String
 * Arrays, Linked 
 	* Hash table 
 * **Queue**, **Stack**
@@ -26,8 +25,6 @@ Here are some notable [data structures](https://github.com/willwang-x/algorithms
 
 | key🔑 | typical problems🌟 | intuition🌠 | tags🏷 |
 | :-------- | :---------: | :----------: | :---------: |
-| [Bit](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/bit.md)| 🌟[268. Missing Number](https://leetcode.com/problems/missing-number/)<br><br>👾[371. sum](https://leetcode.com/problems/sum-of-two-integers/), 👻[260. single](https://leetcode.com/problems/single-number-iii/), 👹[411. unique](https://leetcode.com/problems/minimum-unique-word-abbreviation/) | <img src="https://i.imgur.com/S6s8tb6.png" alt="bit" width="200"/> | |
-| [String](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/string.md) | 🌟[12. Integer to Roman](https://leetcode.com/problems/integer-to-roman/) <br><br> 👾[67. add](https://leetcode.com/problems/add-binary/),👻[6. zigzag](https://leetcode.com/problems/zigzag-conversion/), 👹[336. **palindrome**系列](https://leetcode.com/problems/palindrome-pairs/) | <img src="https://i.imgur.com/1MzpsFt.png" alt="string" width="200"/> | anagram<br />palindrome<br> [KMP⚡️](http://whocouldthat.be/visualizing-string-matching/)|
 | [Array](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/array.md) | 🌟[75. Sort Colors](https://leetcode.com/problems/sort-colors/description/) <br><br> 👾[26 duplicate](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/), 👻[31. permute](https://leetcode.com/problems/next-permutation/description/), 👹[41. missing](https://leetcode.com/problems/first-missing-positive/description/) | <img src="https://i.imgur.com/mWp1gdR.gif" alt="array" width="200"/> <br> | off-by-1, <br> from the back <br> matrix|
 | [Hash Table](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/hashmap.md)| 🌟[325. Maximum Size Subarray Sum Equals k 系列](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) <br><br> 👾[1. sum系列](https://leetcode.com/problems/two-sum/), 👻[49. group](https://leetcode.com/problems/group-anagrams/), [149. points](https://leetcode.com/problems/max-points-on-a-line/)|  <img src="https://i.imgur.com/l1598o9.gif" alt="hash" width="200"/> <br> by [Inside python dict](https://just-taking-a-ride.com/inside_python_dict/chapter2.html)| |
 | [Linked List](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/linked-list.md)|🌟[25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) <br><br> 👾[141. cycle](https://leetcode.com/problems/linked-list-cycle/description/), 👻[2. add](https://leetcode.com/problems/add-two-numbers/description/), 👹[146. LRU](https://leetcode.com/problems/lru-cache/description/) | <img src="https://i.imgur.com/iCUdnOe.png" alt="linkedlist" width="200"/> | 加删查转 <br>虚头虚尾<br>快慢指针 |
