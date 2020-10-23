@@ -11,7 +11,7 @@ Array
 
 ## 📝1. Basics
 
-source: [elements](https://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517671272)
+[source: [elements](https://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517671272)]
 
 Array problems often have simple **brute-force** solutions that use 0(n) space, but subtler solutions that **use the array itself** to **reduce space** complexity to 0(1).
 
@@ -86,28 +86,6 @@ def max_profit(prices: List[int]) -> int:
     return maxprofit 
 ```
 
-More general case: subarray and caculation involved. 
-
-```  python
-# all possible two subarray sum for i < j  (L < M)
-# keep track of max(L) before a fixed `M`
-          L(M)
-         --
-      -- 
-   --
---
-0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-		    ----
-			  M(L)
-```
-
-``` python
-left = 0
-res = 0 
-for i in range(1, len(nums)):
-	left = max(left, cacluate_left(i))
-	res = max(left + nums[i], res)
-``` 
 
 ## 😈4. More training
 
