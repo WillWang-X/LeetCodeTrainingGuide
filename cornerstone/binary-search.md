@@ -1,11 +1,10 @@
 
 <h1 align="center">
 <br>
-  <img src="https://i.imgur.com/7Wh8Jm3.gif"Aogrithms with Illustration" width=42%">
-  <br>
-    <br>
+  <img src="https://i.imgur.com/7Wh8Jm3.gif" alt="binary search" width=42%">
+  <br><br>
 Binary Search
-</sup>  <br><br>
+  <br><br>
 </h1>
 
 

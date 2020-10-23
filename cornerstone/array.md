@@ -1,3 +1,12 @@
+
+<h1 align="center">
+<br>
+  <img src="https://i.imgur.com/mWp1gdR.gif" alt="Array" width=42%">
+  <br><br>
+Array
+  <br><br>
+</h1>
+
 # Array 
 
 ![quick sort](https://i.imgur.com/mWp1gdR.gif)
