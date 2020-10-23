@@ -7,15 +7,13 @@ Array
   <br><br>
 </h1>
 
-# Array 
 
-![quick sort](https://i.imgur.com/mWp1gdR.gif)
 
-## 基础知识
+## 📝1. Basics
 
 source: [elements](https://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517671272)
 
-Array problems often have simple brute-force solutions that use 0(n) space, but subtler solutions that **use the array itself** to **reduce space** complexity to 0(1).
+Array problems often have simple **brute-force** solutions that use 0(n) space, but subtler solutions that **use the array itself** to **reduce space** complexity to 0(1).
 
 
 Front -> Back:
@@ -30,63 +28,35 @@ It's incredibly easy to make **off-by-1** errors when operating on arrays.
 
 Don't worry about preserving the **integrity** of the array (sortedness, keeping equal entries together, etc.) until it is time to return. 
 
-An array can serve as a good data structure when you know the distribution of the elements in advance. For example, a Boolean array of length W is a good choice for representing **a subset of** (0,1,..., W- 1]. (When using a Boolean array to represent a subset of (1,2,3,...,«}, allocate an array of size n+1 to simplify indexing.) 
+An array can serve as a good data structure when you know the distribution of the elements in advance. For example, a Boolean array of length W is a good choice for representing **a subset of** (0,1,..., W- 1]. (When using a Boolean array to represent a subset of (1,2,3,...,}, allocate an array of size n+1 to simplify indexing.) 
 
 When operating on 2D arrays, **use parallel logic** for rows and for columns. 
 
 Sometimes it's easier to **simulate the specification**, than to analytically solve for the result. For example, rather than writing a formula for the i-th entry in the spiral order for an n X n matrix, just compute the output from the beginning. 
 
-### Key word 
+## ⚔️2. Use cases
 
-*  reduce space 
-*  overwriting 
-*  front to back (write or process)
-*  used as hashmap
-*  simulate the specification
+* **target**:
+	* 1 unsorted -> quick select, [215](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+	* 1 sorted -> binary search, [35](https://leetcode.com/problems/search-insert-position/), [33](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+	* 2 sorted array -> dcrease & conquer, [4](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+	* N sorted array -> merge sort, [23](https://leetcode.com/problems/merge-k-sorted-lists/)
+	* ⚃ sorted matrix  -> dcrease & conquer, [378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
+* **pair** (x subarray):
+	* dp (min-so-far), [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+	* x complement: [653](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/), [1049](https://leetcode.com/problems/last-stone-weight-ii/)
+	* x subarray: [1031](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)
+* **subarray**: 
+	* prefix sum, [325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)
+	* two pointer, [209](https://leetcode.com/problems/minimum-size-subarray-sum/)
+	* sliding window, [992](https://leetcode.com/problems/subarrays-with-k-different-integers/)
+* **subsequence**: (duplicate, end with)
+	* stack? 
+	* dfs, [491](https://leetcode.com/problems/increasing-subsequences/)
+	* dp, [300](https://leetcode.com/problems/longest-increasing-subsequence/)
+	* greedy, [659](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
 
-## 典型应用
-
-- **target**:
-	- 1 unsorted -> quick select, [215](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-	- 1 sorted -> binary search, [35](https://leetcode.com/problems/search-insert-position/), [33](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-	- 2 sorted array -> dcrease & conquer, [4](https://leetcode.com/problems/median-of-two-sorted-arrays/)
-	- N sorted array -> merge sort, [23](https://leetcode.com/problems/merge-k-sorted-lists/)
-	- ⚃ sorted matrix  -> dcrease & conquer, [378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
-- **pair** (x subarray):
-	- dp (min_so_far), [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-	- x complement: [653](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/), [1049](https://leetcode.com/problems/last-stone-weight-ii/)
-	- x subarray: [1031](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)
-- **subarray**: 
-	- sum: cumulative (prefix_sum), [325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)
-	- two pointer, [209](https://leetcode.com/problems/minimum-size-subarray-sum/)
-	- sliding window, [992](https://leetcode.com/problems/subarrays-with-k-different-integers/)
-- **subsequence**: (duplicate, end with)
-	- stack? 
-	- dfs, [491](https://leetcode.com/problems/increasing-subsequences/)
-	- dp, [300](https://leetcode.com/problems/longest-increasing-subsequence/)
-	- greedy, [659](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
-
-## 最佳实践
-
-- [libraries]((https://i.imgur.com/VNGOnCx.png))
-- preprocess: 
-	- sort the array first -> binary search 
-	- hashing (val -> index) 
-	- a prefix/suffix sum/product -> to get subarray sum
-- search 
-	- sliding window / two pointers
-	- use **index** instead of slicing when possible (O(1) vs O(n))
-	- out of bounds
-	- array used as a hashmap
-- access / change
-	- processing the element from the back
-	- simulate
-
-### corner case 
-
-- Empty sequence.
-- Sequence with 1 or 2 elements.
-- Sequence with repeated elements.
+## 🤺3. Best Practices
 
 ### out of bounds
 
@@ -139,10 +109,8 @@ for i in range(1, len(nums)):
 	res = max(left + nums[i], res)
 ``` 
 
-- Pracetice: [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/), [1031](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/), 1041  
+## 😈4. More training
 
-
-## 木桩训练
 
 - [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 - [31. Next Permutation](https://leetcode.com/problems/next-permutation/description/)
@@ -154,11 +122,43 @@ for i in range(1, len(nums)):
 - [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 - [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
 - [204. Count Primes](https://leetcode.com/problems/count-primes/description/)
+- [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+- [1031](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)
+- 1041  
+
+## 💬5. Explanation 
+
+## ⚠️6. FAQs 
+
+**Q: What are common corner cases for array?**
+
+A: Here are some I think of:
+
+* Empty sequence.
+* Sequence with 1 or 2 elements.
+* Sequence with repeated elements.
+
+**Q: What are preprocess methods often used in the array?**
+
+A: Here are 3 I think of:
+
+* **sort** the array first -> binary search 
+* **hashing** (val -> index) 
+* a **prefix/suffix** sum/product -> to get subarray sum
+
+**Q: What are keywords that comes to your mind when you search in the array?**
+
+A: Here are 4 I think of: 
+
+* **sliding window** / **two pointers**
+* use **index** instead of slicing when possible (O(1) vs O(n))
+* out of **bounds**
+* array used as a **hashmap**
 
 
+**Q: What do you often do when you traverse the array?**
 
-## Explain
+A：
 
-## Q&A
-
-## Thanks
+* **processing** the element from the back
+* just **simulate**
