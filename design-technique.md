@@ -19,7 +19,7 @@ Selecting a **proper** design technique for algorithms is a **complex** but **im
 * Transform and conquer
 * Backtracking
 
-| key 🔑 | typical problems👻 | intuition 🎦 | notes 📒 |
+| key🔑 | typical problems👻 | intuition🌠 | tags🏷 |
 | :--------: | :---------: | :----------: | :---------: |
 | [DFS](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/dfs.md)| 🌟[46. Permutations](https://leetcode.com/problems/permutations/description/)  <br><br>👾[112. **Path**系列](https://leetcode.com/problems/path-sum/submissions/1), 👻[105. Construct](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/), 👹[329. topological](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/) |<img src="https://i.imgur.com/RVGtn22.gif" alt="DFS" width="200"/> <br> | [探测环](https://willwang-x.github.io/2018/02/shift)<br>前序遍历<br>非递归 <br>拓扑排序<br>树深<br>**DFS with Memo 913**<br> |
 | [BFS](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/bfs.md) | 🌟[490.The Maze系列](https://leetcode.com/problems/the-maze/) <br><br> 👾[107. level](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/), 👻[200. island](https://leetcode.com/problems/number-of-islands/), 👹[269. alien](https://leetcode.com/problems/alien-dictionary)| <img src="https://i.imgur.com/c0F4gTc.gif" alt="bfs" width="200"/> | 遍历<br>块<br>最短路径<br>拓扑排序|
