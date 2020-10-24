@@ -14,8 +14,8 @@ Data Structures
 
 Here are some notable [data structures](https://github.com/willwang-x/algorithms-with-illustrations/blob/master/cornerstone/data-structure.md): 
 
-* Arrays, Linked 
-	* Hash table 
+* Arrays (Hash table) 
+* Linked  
 * **Queue**, **Stack**
 * Set (Disjoint-set)
 * Graph
