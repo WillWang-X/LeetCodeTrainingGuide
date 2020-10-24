@@ -1,12 +1,16 @@
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Depth-first_search">
+  <img src="https://i.imgur.com/RVGtn22.gif" alt="DFS" width=42%">
+  </a>
+  <br><br>
+DFS
+  <br><br>
+</h1>
 
-# DFS
+> Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the **root** node (selecting some arbitrary node as the root node in the case of a graph) and **explores as far as possible** along each branch before backtracking. [[wiki](https://www.wikiwand.com/en/Depth-first_search)]
 
-<center>
-<img src="https://i.imgur.com/RVGtn22.gif" alt="DFS" width="200"/> 
-</center>
-
-
-## 基础知识
+## 📝1. Basics
 
 > DFS是点扩展：天生记路径
 
@@ -24,7 +28,8 @@ Some Applications:
 * Finding **strongly** connected components.
 * Finding articulation points (cut vertices) of the graph.
 
-## 典型应用
+## ⚔️2. Use cases
+
 - **path**: 112, 1022
 	- detect cycle: [google](https://willwang-x.github.io/2018/02/shift)
 	- topology sort
@@ -32,7 +37,7 @@ Some Applications:
 - connected component: 924, 928
  
 
-## 最佳实践
+## 🤺3. Best Practices
 
 - Graph 
 - Connected component 
@@ -54,7 +59,7 @@ graph = {'A': set(['B', 'C']),
          'F': set(['C', 'E'])}
 ```
 
-### Connected Component
+#### Connected Component
 
 
 **Iterative**
@@ -84,7 +89,7 @@ def dfs(graph, start, seen=set()):
 dfs(graph, 'C') # {'E', 'D', 'F', 'A', 'C', 'B'}
 ```
 
-### Paths 
+#### Paths 
 
 
 **Iterative**
@@ -120,7 +125,7 @@ def dfs_paths(graph, start, goal, path=None):
 list(dfs_paths(graph, 'C', 'F')) # [['C', 'F'], ['C', 'A', 'B', 'E', 'F']]
 ```
 
-## [木桩训练](https://leetcode.com/tag/depth-first-search/) 
+## 😈4. [More training](https://leetcode.com/tag/depth-first-search/)
 
 * [112. Path Sum](https://leetcode.com/problems/path-sum/submissions/1)
 * [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/)
@@ -130,10 +135,13 @@ list(dfs_paths(graph, 'C', 'F')) # [['C', 'F'], ['C', 'A', 'B', 'E', 'F']]
 * subset
 * [1034. Coloring A Border](https://leetcode.com/problems/coloring-a-border/): conditional DFS
 
+## 💬5. Explanation
 
-## Q&A
+## ⚠️6. FAQs
 
-### 1. DFS vs Backtracking
+#### Q: DFS vs Backtracking?
+
+A: 
 
 * [Backtracking](https://www.wikiwand.com/en/Backtracking) is a more general purpose algorithm.
 * [Depth-First search](https://www.wikiwand.com/en/Depth-first_search) is a specific form of **backtracking** related to searching tree structures. 
@@ -147,9 +155,9 @@ Backtracking, though, can be used on any type of structure where portions of the
 from [What's the difference between backtracking and depth first search?](https://stackoverflow.com/questions/1294720/whats-the-difference-between-backtracking-and-depth-first-search)
 
 
-### 2. DFS vs BFS for Binary Tree
+#### Q: DFS vs BFS for Binary Tree?
 
-source: [geeksforgeeks](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
+A:
 
 * Breadth First Traversal (Or Level Order Traversal)
 * Depth First Traversals
@@ -161,21 +169,26 @@ All four traversals require **O(n) time** as they visit every node exactly once.
 
 It is evident that extra space required for Level order traversal is likely to be more when tree is **more balanced** and extra space for Depth First Traversal is likely to be more when tree is **less balanced**.
 
+source: [geeksforgeeks](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
 
-How to Pick one?
+#### Q: Which one, DFS or BFS?
 
-* **Extra Space** can be one factor (Explained above)
-	* If the tree is very **deep** and solutions are rare, depth first search (DFS) might take an extremely long time, but BFS could be faster.
-	* If the tree is very **wide**, a BFS might need too much memory, so it might be completely impractical.
-	* If solutions are **frequent** but located **deep** in the tree, BFS could be impractical.
-	* If the search tree is very **deep** you will need to **restrict** the search depth for depth first search (DFS), anyway (for example with **iterative deepening**).
-* Depth First Traversals are typically **recursive** and recursive code requires **function call overheads**.
-* The most important points is, BFS starts visiting **nodes** from root while DFS starts visiting nodes from **leaves**. So if our problem is to search something that is more likely to closer to **root**, we would prefer **BFS**. And if the target node is close to a **leaf**, we would prefer **DFS**.
+A: **Extra Space** can be one factor (Explained above)
 
+* If the tree is very **deep** and solutions are rare, depth first search (DFS) might take an extremely long time, but BFS could be faster.
+* If the tree is very **wide**, a BFS might need too much memory, so it might be completely impractical.
+* If solutions are **frequent** but located **deep** in the tree, BFS could be impractical.
+* If the search tree is very **deep** you will need to **restrict** the search depth for depth first search (DFS), anyway (for example with **iterative deepening**).
 
-## Thanks 
+Depth First Traversals are typically **recursive** and recursive code requires **function call overheads**.
 
-- [Depth-First Search and Breadth-First Search in Python](https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/)
-- [Difference between BFS and DFS](https://www.thecrazyprogrammer.com/2017/06/difference-between-bfs-and-dfs.html): Non-Visited nodes, Visited nodes, Explored nodes
-- [深度优先搜索(DFS)小结](http://x-wei.github.io/dfs-summary.html#for-trees-dfs-with-depth)
-- [When is it practical to use Depth-First Search (DFS) vs Breadth-First Search (BFS)?](https://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-depth-first-search-dfs-vs-breadth-first-search-bf)
+The most important points is, BFS starts visiting **nodes** from root while DFS starts visiting nodes from **leaves**. So if our problem is to search something that is more likely to closer to **root**, we would prefer **BFS**. And if the target node is close to a **leaf**, we would prefer **DFS**.
+
+#### Q: Any more resources?
+
+A: Here are some: 
+
+* [Depth-First Search and Breadth-First Search in Python](https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/)
+* [Difference between BFS and DFS](https://www.thecrazyprogrammer.com/2017/06/difference-between-bfs-and-dfs.html): Non-Visited nodes, Visited nodes, Explored nodes
+* [深度优先搜索(DFS)小结](http://x-wei.github.io/dfs-summary.html#for-trees-dfs-with-depth)
+* [When is it practical to use Depth-First Search (DFS) vs Breadth-First Search (BFS)?](https://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-depth-first-search-dfs-vs-breadth-first-search-bf)
