@@ -1,9 +1,16 @@
-# Binary tree
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Binary_tree">
+  <img src="https://i.imgur.com/OtqGoIa.png" alt="Binary Tree" width=42%">
+  </a>
+  <br><br>
+Binary tree
+  <br><br>
+</h1>
 
+> A tree whose elements have at most 2 children. [[wiki](https://www.wikiwand.com/en/Binary_tree)]
 
-> A tree whose elements have at most 2 children.
-
-## 基础知识
+## 📝1. Basics
 
  **Recursive algorithms** are well-suited to problems on trees. Remember to include space implicitly allocated on the **function call stack** when doing space complexity analysis. 
  
@@ -15,56 +22,14 @@ If each node has a **parent field**, use it to make your code simpler, and to re
 
 It's easy to make the **mistake** of treating a node that has a single child as a leaf. 
 
-## 典型应用
+## ⚔️2. Use cases
 
 
-- 基本**操作**(寻找特定节点)
-	- [156 upside down] 	
-	- [617 merge]
-	- [669 Trim] 
-	- [226 invert] 
-	- [606 construct] 
-	- [108 convert]
-	- [107 level order]
-	- [114 Flatten BT to Linked List]
-	- [426 convert BS to linked list]
-	- [654 build maximum](https://leetcode.com/problems/maximum-binary-tree/)
-	- [701 insert]
-	- [814 pruning](https://leetcode.com/problems/binary-tree-pruning/)
-	- [889 construct from preorder & postorder]
-	- [951 flip](https://leetcode.com/problems/flip-equivalent-binary-trees/)
-	- [971 Flip BT to Preorder]
-	- [99 recover]
-- **查看**判断(判断树的性质) 
-	- [96 unique]	 
-	- [965 univalued] 
-	- [104 depth]
-	- [111 minimum depth](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
-	- [124 path sum]
-	- [173 iterator]
-	- [199 right side view]
-	- [366 find leaves]
-	- [637 average]
-	- [655 print]
-	- [662 Maximum width]
-	- [563 tilt]
-	- [543 diameter]
-	- [545 boundary]
-	- [257 path]
-	- [236 lowest common ancestor]
-	- [671 second minimum]
-	- [270 cloest value]
-	- [110 balanced](https://leetcode.com/problems/balanced-binary-tree/)
-	- [742 closest leaf]
-	- [894 full](https://leetcode.com/problems/all-possible-full-binary-trees/)
-	- [863 K distance]
-	- [958 completeness]
+* [Operation](https://www.wikiwand.com/en/Tree_(data_structure)#/Common_operations): merge, trim, invert, flatten, insert, flip, recover, construct, convert
+* [Attribute](https://www.wikiwand.com/en/Tree_(data_structure)#/Terminology): unique, univalued, depth, view, leaves, average, print, width, tilt, diameter, boundary, path, ancestor, closest value, closet leaf
+* Path: path sum
 
-* Construct 
-* Convert: 树和其他数据结构的相互转换 	
-* 树的路径问题
-
-## 最佳实践
+## 🤺3. Best Practices
 
  
 - search
@@ -145,25 +110,24 @@ def min_depth(self, root: TreeNode) -> int:
     return min_ + 1
 ```
 
-### corner case 
+## 😈4. More training
 
-- root == `None`
-- negative value 
-- empty tree\ single node \ two nodes
-- Very skewed tree (like a linked list).
+* [112. Path Sum](https://leetcode.com/problems/path-sum/)
+* [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+* [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+* [437. Path Sum III](https://leetcode.com/problems/path-sum-iii/)
+* [666. Path Sum IV](https://leetcode.com/problems/path-sum-iv/)
 
+## 💬5. Explanation
 
-## 木桩训练
+## ⚠️6. FAQs
 
-- [112. Path Sum](https://leetcode.com/problems/path-sum/)
-- [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
-- [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-- [437. Path Sum III](https://leetcode.com/problems/path-sum-iii/)
-- [666. Path Sum IV](https://leetcode.com/problems/path-sum-iv/)
+#### Q: What are corner cases for binary tree problems?
 
-## Explain
+A: Here are 4 I think of: 
 
-## Q&A
-
-## Thanks
+* root == `None`
+* negative value 
+* empty tree\ single node \ two nodes
+* Very skewed tree (like a linked list).
 
