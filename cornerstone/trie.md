@@ -1,10 +1,16 @@
-# Trie 
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Trie">
+  <img src="https://i.imgur.com/w7j1TTW.gif" alt="Trie" width=42%">
+  </a>
+  <br><br>
+Trie
+  <br><br>
+</h1>
 
-![Trie](https://i.imgur.com/w7j1TTW.gif)
+> In computer science, a trie, also called digital tree or prefix tree, is a kind of search tree—**an ordered tree data structure** used to store a dynamic set or associative array where the keys are usually strings. [[wiki](https://www.wikiwand.com/en/Trie)]
 
-from https://moaazsidat.com/writings/2015/11/24/supercharging-react-with-immutablejs/
-
-## 基础知识
+## 📝1. Basics
 
 Tries are special trees (prefix trees) that make searching and storing strings more efficient. Tries have many practical applications, such as conducting **searches** and providing **autocomplete**. It is helpful to know these common applications so that you can easily identify when a problem can be efficiently solved using a trie.
 
@@ -12,26 +18,13 @@ Sometimes preprocessing a dictionary of **words** (given in a list) into a trie,
 
 Be familiar with implementing, from scratch, a Trie class and its `add`, `remove` and `search` methods.
 
-
-### Pros
-
-1. With Trie, we can insert and find strings in O(L) time where L represent the length of a single word. This is obviously faster that BST. This is also faster than Hashing because of the ways it is implemented. We do not need to compute any hash function. No collision handling is required (like we do in open addressing and separate chaining)
-2. Another advantage of Trie is, we can easily print all words in alphabetical order which is not easily possible with hashing.
-3. We can efficiently do prefix search (or auto-complete) with Trie.
-
-### Cons
-
-The main disadvantage of tries is that they need lot of memory for storing the strings. For each node we have too many node pointers(equal to number of characters of the alphabet), If space is concern, then Ternary Search Tree can be preferred for dictionary implementations. In Ternary Search Tree, time complexity of search operation is O(h) where h is height of the tree. Ternary Search Trees also supports other operations supported by Trie like prefix search, alphabetical order printing and nearest neighbor search.
-
-The final conclusion is regarding tries data structure is **that they are faster but require huge memory for storing the strings.**
-
-## 典型应用
+## ⚔️2. Use cases
 
 - implement trie [208](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
 - search(string): 421 
 
 
-## 最佳实践
+## 🤺3. Best Practices
 
 - build a trie 
 - [delete subtrie bwtween two words](https://repl.it/@WillWang42/delete-subtrie-recursively)
@@ -121,7 +114,7 @@ class Trie:
 # param_3 = obj.startsWith(prefix) 
 ```
 
-## 木桩训练
+## 😈4. More training
 
 - [211. Add and Search Word - Data structure design](https://leetcode.com/problems/add-and-search-word-data-structure-design/description/)
 - [212. Word Search II](https://leetcode.com/problems/word-search-ii/description/) 🌟
@@ -131,11 +124,27 @@ class Trie:
 - [1032. Stream of Characters](https://leetcode.com/problems/stream-of-characters/)
 
 
-## Explain
+## 💬5. Explanation
 
-## Q&A 
+## ⚠️6. FAQs
 
-## Read More 
+#### Q: What are pros and cons of Trie?
 
-[Geeks Trie](https://www.geeksforgeeks.org/advantages-trie-data-structure/)
+A: 
+
+Pros:
+
+1. With Trie, we can insert and find strings in O(L) time where L represent the length of a single word. This is obviously faster that BST. This is also faster than Hashing because of the ways it is implemented. We do not need to compute any hash function. No collision handling is required (like we do in open addressing and separate chaining)
+2. Another advantage of Trie is, we can easily print all words in alphabetical order which is not easily possible with hashing.
+3. We can efficiently do prefix search (or auto-complete) with Trie.
+
+Cons: 
+
+The main disadvantage of tries is that they need lot of memory for storing the strings. For each node we have too many node pointers(equal to number of characters of the alphabet), If space is concern, then Ternary Search Tree can be preferred for dictionary implementations. In Ternary Search Tree, time complexity of search operation is O(h) where h is height of the tree. Ternary Search Trees also supports other operations supported by Trie like prefix search, alphabetical order printing and nearest neighbor search.
+
+The final conclusion is regarding tries data structure is **that they are faster but require huge memory for storing the strings.**
+
+
+
+source: [Geeks Trie](https://www.geeksforgeeks.org/advantages-trie-data-structure/)
 
