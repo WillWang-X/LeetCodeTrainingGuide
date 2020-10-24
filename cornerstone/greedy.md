@@ -1,14 +1,19 @@
-# Greedy
-
-<img src="https://i.imgur.com/1aDfDOW.png" alt="greedy" width="200"/>
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Greedy_algorithm">
+  <img src="https://i.imgur.com/1aDfDOW.png" alt="greedy" width=42%">
+  </a>
+  <br><br>
+Greedy
+  <br><br>
+</h1>
 
 
 > 做对了，叫**艺高人胆大，四两拨千斤**。
+> 
 > 做错了，叫一意孤行，执迷不悟。
 
-## 基础知识
-
-source: [wiki](https://www.wikiwand.com/en/Greedy_algorithm)
+## 📝1. Basics
 
 A greedy algorithm is an algorithmic paradigm that follows the problem solving heuristic of **making the locally optimal choice** at each stage with the intent of finding a global optimum. In many problems, a greedy strategy does not usually produce an optimal solution, but nonetheless a greedy heuristic may yield locally optimal solutions that approximate a globally optimal solution in a reasonable amount of time.
 
@@ -17,9 +22,8 @@ Greedy algorithms produce good solutions on some mathematical problems, but not 
 * Greedy choice property
 * Optimal substructure
 
+## ⚔️2. Use cases
 
-
-## 典型应用
 
 - prove:
 	- stay ahead(induction): [253](https://leetcode.com/problems/meeting-rooms-ii/)
@@ -46,17 +50,17 @@ Greedy algorithms produce good solutions on some mathematical problems, but not 
 
 - interval: 435, 1024
 
-## 最佳实践
+## 🤺3. Best Practices
 
 - heap 
 
-## 木桩训练
+## 😈4. More training
 
 - [402. Remove K Digits](https://leetcode.com/problems/remove-k-digits/)
 - [455. Assign Cookies](https://leetcode.com/problems/assign-cookies/)
 - [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
 - [135. Candy](https://leetcode.com/problems/candy/)
 
-## Q & A 
+## 💬5. Explanation
 
-## Thanks
+## ⚠️6. FAQs
