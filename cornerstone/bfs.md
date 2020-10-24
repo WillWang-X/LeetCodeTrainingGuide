@@ -1,10 +1,16 @@
-# BFS
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Breadth-first_search">
+  <img src="https://i.imgur.com/c0F4gTc.gif" alt="BFS" width=42%">
+  </a>
+  <br><br>
+BFS
+  <br><br>
+</h1>
 
-<center>
-<img src="https://i.imgur.com/c0F4gTc.gif" alt="bfs" width="200"/>
-</center>
+> Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary node of a graph, sometimes referred to as a 'search key'), and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. [[wiki](https://www.wikiwand.com/en/Breadth-first_search)]
 
-## 基础知识
+## 📝1. Basics
 
 * BFS visit nodes level by **level** in Graph.
 * A node is fully explored before any other can begin.
@@ -18,21 +24,21 @@ Some Application:
 * Finding all nodes within **one** connected component.
 * Testing a graph for **bipartiteness**.
 
-## 典型应用
+## ⚔️2. Use cases
 
 1. Traversal: 133, 301
 2. Connected Components: 200, 261, 323
 3. Shortest Path: 🌟[126 word ladder], 127,286, 317, [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
 4. Topological: [207](https://leetcode.com/problems/course-schedule/), [269](https://leetcode.com/problems/alien-dictionary/) 
 
-## 最佳实践
+## 🤺3. Best Practices
 
 - traverse layer by layer(depth)
 - connected component 
 - path
 - shortest distance
 
-### traverse layer by layer 
+#### traverse layer by layer 
 
 ``` python
 front = [start]
@@ -59,7 +65,7 @@ for node, depth in queue:
 
 - Try [815](https://leetcode.com/problems/bus-routes/)
 
-### connected component 
+#### connected component 
 
 ``` python
 graph = {'A': set(['B', 'C']),
@@ -83,7 +89,7 @@ def bfs(graph, start):
 bfs(graph, 'A') # {'B', 'C', 'A', 'F', 'D', 'E'}
 ```
 
-### path
+#### path
 
 ``` python 
 def bfs_paths(graph, start, goal):
@@ -109,7 +115,7 @@ def shortest_path(graph, start, goal):
 shortest_path(graph, 'A', 'F') # ['A', 'C', 'F']
 ```
 
-### shortest distance
+#### shortest distance
 
 ``` python
 # bfs: 1. pop 2. check 3. add unseen neighbors
@@ -129,7 +135,7 @@ def shortest_depth(graph, start, goal):
 	return -1	
 ```
 
-## 木桩训练
+## 😈4. More training
 
 1. 301 Remove Invalid Parentheses 
 1. 133 Clone Graph  ❶ 
@@ -145,17 +151,15 @@ def shortest_depth(graph, start, goal):
 2. [631. Design Excel Sum Formula](https://leetcode.com/problems/design-excel-sum-formula/)
 2. [815. Bus Routes](https://leetcode.com/problems/bus-routes/)
 
-## Q&A
+## 💬5. Explanation
 
-### 1. BFS 和 Dijsktra 的关系？
+## ⚠️6. FAQs
 
-Edge == 1, Dijsktra 退化成 BFS。因为如果每一条权值相同，即无权图，那么从源(Source)开始访问图(Graph)遇到节点的最小深度就等于到该节点的最短路径，因此Priority Queue就退化成了Queue, `Dijkstra`算法就退化成了BFS。
+#### Q: BFS cs Dijsktra?
+
+A: Edge == 1, Dijsktra 退化成 BFS。因为如果每一条权值相同，即无权图，那么从源(Source)开始访问图(Graph)遇到节点的最小深度就等于到该节点的最短路径，因此Priority Queue就退化成了Queue, `Dijkstra`算法就退化成了BFS。
 
 - [787. Cheapest Flights Within K Stops
 ](https://leetcode.com/problems/cheapest-flights-within-k-stops/): BFS is not a good choice
 - [847. Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/): use BFS instead Dijkstra
 
-## Reference 
-
-- [Depth-First Search and Breadth-First Search in Python](https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/)
-- [Difference between BFS and DFS](https://www.thecrazyprogrammer.com/2017/06/difference-between-bfs-and-dfs.html): Non-Visited nodes, Visited nodes, Explored nodes
