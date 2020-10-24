@@ -111,7 +111,7 @@ s = "10[a]", return "aaaaaaaaaa".
 
 ## ⚠️6. FAQs
 
-##### Q: stack 和 heap 有什么区别？
+#### Q: stack 和 heap 有什么区别？
 
 A: 
 
@@ -120,6 +120,6 @@ A:
 - Heap: Last in, Best out (定制化能力更强)
 - Queue: First in, First out
 
-##### Q: stack的优化有什么？
+#### Q: stack的优化有什么？
  
 A: 如果不关注过程，只在乎结果。可以使用变量`count`来标记，空间由`O(n)`到`O(1)`, 如[LC 1021](https://leetcode.com/problems/remove-outermost-parentheses/), 请试着用stack和count分别解决。是不是有一种在DP中，二维cache压缩成一维的感觉。
