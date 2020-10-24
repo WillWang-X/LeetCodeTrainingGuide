@@ -1,16 +1,27 @@
-# Heap 
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Heap_(data_structure)">
+  <img src="https://i.imgur.com/LHCxZOp.gif" alt="Heap" width=42%">
+  </a>
+  <br><br>
+Heap
+  <br><br>
+</h1>
 
+> In computer science, a heap is a specialized **tree-based data structure** which is essentially an almost complete tree that satisfies the heap property: 
+> 
+> * in a max heap, for any given node C, if P is a parent node of C, then the key (the value) of P is greater than or equal to the key of C. 
+> * In a min heap, the key of P is less than or equal to the key of C. The node at the "top" of the heap (with no parents) is called the root node. 
+> 
+> [[wiki](https://www.wikiwand.com/en/Heap_(data_structure))]
 
-![max heap](https://i.imgur.com/LHCxZOp.gif)
+## 📝1. Basics 
 
+Use a heap when all you care about is the **largest** or **smallest** elements, and you do not need to support fast lookup, delete, or search operations for arbitrary elements. 
 
-## 基础知识 
+A heap is a good choice when you need to compute the k **largest** or k **smallest** elements in a collection. For the former, use a min-heap, for the latter, use a max-heap. 
 
-Use a heap when all you care about is the **largest** or **smallest** elements, and you do not need to support fast lookup, delete, or search operations for arbitrary elements. [Problem 11.1]
-
-A heap is a good choice when you need to compute the k **largest** or k **smallest** elements in a collection. For the former, use a min-heap, for the latter, use a max-heap. [Problem 11.4]
-
-## 典型应用
+## ⚔️2. Use cases
 
 - first in, best out, [407](https://leetcode.com/problems/trapping-rain-water-ii/)
 - top / lowest k: [347](https://leetcode.com/problems/top-k-frequent-elements/description/)
@@ -19,7 +30,7 @@ A heap is a good choice when you need to compute the k **largest** or k **smalle
 - benchmark: [253](https://leetcode.com/problems/meeting-rooms-ii/)
 - keep poping 
 
-## 最佳实践
+## 🤺3. Best Practices
 
 - min heap
 - max heap
@@ -134,26 +145,23 @@ def merge_k_lists(self, lists: List[ListNode]) -> ListNode:
     return dummy.next
 ```
 
-## 木桩训练 
+## 😈4. More training
 
 - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 - [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 - [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
-## Explain
+## 💬5. Explanation
 
-## Q&A
+## ⚠️6. FAQs
 
-### 1. How many ways do we have to find k largest element? 
+#### Q: How many ways do we have to find k largest element? 
 
-n = len(nums)
+A: n = len(nums)
 
-- sort:  `O(nlogn + 1)` sort and return `nums[-k]`
-- min heap: `O(nlogk)` maintain a min heap of size of k and return `heaps[0]`
-- max heap: `O(n + klogn)` heapify and pop k times
-- quick select: `O(n)` 
-
-## Thanks
-
+* sort:  `O(nlogn + 1)` sort and return `nums[-k]`
+* min heap: `O(nlogk)` maintain a min heap of size of k and return `heaps[0]`
+* max heap: `O(n + klogn)` heapify and pop k times
+* quick select: `O(n)` 
 
 
