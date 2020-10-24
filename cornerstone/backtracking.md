@@ -8,6 +8,9 @@ Backtracking
   <br><br>
 </h1>
 
+> This method is based on the **trial and error**. If we want to solve some problem then desired solution is chosen from the finite set S. 
+> 
+> [[Design And Analysis Of Algorithms](https://books.google.com/books?id=McPJt_eBgnoC&pg=SA1-PA9#v=onepage&q&f=false)]
 
 ## 📝1. Basics
 
