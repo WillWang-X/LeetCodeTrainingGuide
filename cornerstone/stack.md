@@ -4,7 +4,7 @@
   <img src="https://i.imgur.com/O6tbQ6f.png" alt="stack" width=42%">
   </a>
   <br><br>
-Data Structures
+Stack
   <br><br>
 </h1>
 
