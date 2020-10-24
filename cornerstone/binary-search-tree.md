@@ -1,14 +1,22 @@
-# Binary Search Tree
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Binary_search_tree">
+  <img src="https://i.imgur.com/oAQtYTl.gif" alt="binary search tree" width=42%">
+  </a>
+  <br><br>
+Binary Search Tree
+  <br><br>
+</h1>
 
-<img src="https://i.imgur.com/oAQtYTl.gif" alt="binary search tree" width="200"/>
+> In computer science, a binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree whose internal nodes each store a key **greater than** all the keys in the node's left subtree and **less than** those in its right subtree. [[wiki](https://www.wikiwand.com/en/Binary_search_tree)]
 
-## 基础知识
+## 📝1. Basics
 
-Binary Search Tree is a node-based binary tree data structure which has the following properties:
+With a BST you can **iterate** through elements in **sorted order** in time O(n) (regardless of whether it is balanced).
 
-* The left subtree of a node contains only nodes with keys lesser than the node’s key.
-* The right subtree of a node contains only nodes with keys greater than the node’s key.
-* The left and right subtree each must also be a binary search tree.
+Some problems need a combination of **a BST and a hashtable**. For example, if you insert student objects into a BST and entries are ordered by GPA, and then a student’s GPA needs to be updated and all we have is the student’s name and new GPA, we cannot find the student by name without a full traversal. However, with an additional hash table, we can directly go to the corresponding entry in the tree.
+
+The BST property is a **global property**—a binary tree may have the property that each node’s key is greater than the key at its left child and smaller than the key at its right child, but it may not be a BST.
 
 ### lists of fact 
 
@@ -18,7 +26,7 @@ Binary Search Tree is a node-based binary tree data structure which has the foll
 - **Predecessor** = "before node", i.e. the previous node, or the largest node before the current one.
 
 
-## 典型应用
+## ⚔️2. Use cases
 
 - isBST
 	- successor
@@ -32,7 +40,7 @@ Binary Search Tree is a node-based binary tree data structure which has the foll
 	- delete 
  
 
-## 最佳实践
+## 🤺3. Best Practices
 
 - isBST
 - to ordered array
@@ -43,7 +51,7 @@ Binary Search Tree is a node-based binary tree data structure which has the foll
 - delete a node in BST? 
 
 
-### isBST
+#### isBST
 
 ``` python
 def is_valid_BST(root, lower = float("-inf"), upper = float("inf")):
@@ -57,7 +65,7 @@ def is_valid_BST(root, lower = float("-inf"), upper = float("inf")):
             is_valid_BST(root.right, root.val, upper)
 ```
 
-### inorder
+#### inorder
 
 > BST to a array ordered in the the ascending order
 
@@ -105,7 +113,7 @@ def inorder_traversal(root: TreeNode) -> List[int]:
     return ans
 ```
 
-### sucessor
+#### sucessor
 
 > Successor = "after node", i.e. the next node, or the smallest node after the current one.
 
@@ -122,7 +130,7 @@ def successor(root):
     return root
 ```
 
-### predecessor
+#### predecessor
 
 > Predecessor = "before node", i.e. the previous node, or the largest node before the current one.  
 
@@ -137,7 +145,7 @@ def predecessor(root):
 ```
 
 
-### kth smallest (iterative+inorder)
+#### kth smallest (iterative+inorder)
 
 ``` python
 def kth_smallest(root: TreeNode, k: int) -> int:
@@ -155,7 +163,7 @@ def kth_smallest(root: TreeNode, k: int) -> int:
         root = node.right 
 ``` 
 
-### smallest node 
+#### smallest node 
 
 ``` python
 # smallest node in a sub BST
@@ -166,7 +174,7 @@ def _smallest(self, node):
 ```
 
 
-### delete the node 
+#### delete the node 
 
 ``` python
 def delete_node(root: TreeNode, key: int) -> TreeNode:
@@ -187,18 +195,18 @@ def delete_node(root: TreeNode, key: int) -> TreeNode:
     return root 
 ```
 
-## 木桩训练
+## 😈4. More training
 
 - [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 - [538. Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 
-## Explain
+## 💬5. Explanation
 
-## Q&A
+## ⚠️6. FAQs
 
-### 1. Advantages of BST over Hash Table?
+#### Q: Advantages of BST over Hash Table?
 
-Hash Table supports following operations in Θ(1) time.
+A: Hash Table supports following operations in Θ(1) time.
 1) Search
 2) Insert
 3) Delete
@@ -214,7 +222,4 @@ Following are some important points in favor of BSTs.
 * BSTs are **easy to implement** compared to hashing, we can easily implement our own customized BST. To implement Hashing, we generally rely on libraries provided by programming languages.
 * With **Self-Balancing BSTs, all operations are guaranteed to work in O(Logn) time.** But with Hashing, Θ(1) is average time and some particular operations may be costly, especially when **table resizing** happens.
 
-
-## More
-
-- [Advantages of BST over Hash Table](https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table/)
+source:  [Advantages of BST over Hash Table](https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table/)
