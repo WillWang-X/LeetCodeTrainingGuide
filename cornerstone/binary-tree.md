@@ -4,7 +4,7 @@
   <img src="https://i.imgur.com/OtqGoIa.png" alt="Binary Tree" width=42%">
   </a>
   <br><br>
-Binary tree
+Binary Tree
   <br><br>
 </h1>
 
