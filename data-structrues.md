@@ -19,9 +19,7 @@ Here are some notable [data structures](https://github.com/willwang-x/algorithms
 * **Queue**, **Stack**
 * Set (Disjoint-set)
 * Graph
-* Trees
-	* Binary Search Tree, **Heap**, Trie
-	* Binary Indexed Tree, Segment Tree
+* Trees (Binary Search Tree, **Heap**, Trie, [BIT](https://www.wikiwand.com/en/Fenwick_tree), [ST](https://www.wikiwand.com/en/Segment_tree))
 
 | key🔑 | typical problems🌟 | intuition🌠 | tags🏷 |
 | :-------- | :---------: | :----------: | :---------: |
