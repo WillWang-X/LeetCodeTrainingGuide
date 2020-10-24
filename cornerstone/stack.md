@@ -7,10 +7,13 @@
 Stack
   <br><br>
 </h1>
-
-> when to pop and push?
+ 
+> In computer science, a **stack** is an abstract data type that serves as a collection of elements, with two main principal operations:
 > 
-> **Stack** is a linear data structure which follows **a particular order** in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out). [[wiki](https://www.wikiwand.com/en/Stack_(abstract_data_type))]
+> * push, which adds an element to the collection, and
+> * pop, which removes the most recently added element that was not yet removed.
+> 
+> The order in which elements come off a stack gives rise to its alternative name, **LIFO** (last in, first out). [[wiki](https://www.wikiwand.com/en/Stack_(abstract_data_type))]
 
 ## 📝1. Basics
 
