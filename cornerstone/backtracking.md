@@ -1,21 +1,27 @@
-# Backtracking 
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Backtracking">
+  <img src="https://i.imgur.com/2Y3D3fI.gif" alt="Backtracking" width=42%">
+  </a>
+  <br><br>
+Backtracking
+  <br><br>
+</h1>
 
-![Backtracking](https://i.imgur.com/2Y3D3fI.gif)
 
-
-## 基础知识
+## 📝1. Basics
 
 **Backtracking** is a general algorithm for finding all (or some) solutions to some computational problems, notably constraint satisfaction problems, that incrementally builds candidates to the solutions, and abandons a candidate ("backtracks") as soon as it determines that the candidate cannot possibly be completed to a valid solution.[1][2]
 
 
-## 典型应用
+## ⚔️2. Use cases
 
 - subset
 - permutation 
 - combination sum
 - palindrome partitioning
 
-## 最佳实践
+## 🤺3. Best Practices
 
 ### path: permutation(visited)
 ``` python
@@ -127,7 +133,7 @@ def backtrack(path, i, res, s):
 			backtrack(path + [s[i:nxt+1]], nxt+1, res, s)
 ```
 
-## 木桩训练
+## 😈4. More training
 
 * [31. Next Permutation](https://leetcode.com/problems/next-permutation/)
 * [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
@@ -141,12 +147,6 @@ def backtrack(path, i, res, s):
 * [266. Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)
 * [267. Palindrome Permutation II](https://leetcode.com/problems/palindrome-permutation-ii/)
 
+## 💬5. Explanation
 
-
-## Explain
-
-
-
-## Q&A
-
-## Thanks
+## ⚠️6. FAQs
