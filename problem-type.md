@@ -14,7 +14,7 @@ There are 11 fields:
 1. Computational science
 1. Computer science
 1. Information theory and signal processing
-1. **Software engineering**: 
+1. **Software engineering**
 1. Database algorithms
 1. Distributed systems algorithms
 1. Networking
@@ -42,6 +42,7 @@ There are 11 fields:
 |/Optimization|...dynamic programming...|
 |//-[dynamic programming](https://www.wikiwand.com/en/Dynamic_programming#/Algorithms_that_use_dynamic_programming)|string (longest common subsequence, longest increasing subsequence, longest common substring, edit distance), Kadane-maximum-subarray, <br> graph (Viterbi, Floyd, TSP, Bellman–Ford), <br> pseudo-polynomial time([subset sum](https://repl.it/@WillWang42/dp-subset-sumåååå), [knapsack](https://repl.it/@WillWang42/dp-knapsack), partition), <br> interval scheduling<br> [segmented least square](https://repl.it/@WillWang42/segmented-least-squares)   |
 |[**Computational science**](https://www.wikiwand.com/en/Computational_science)|
+|8. [Software engineering](https://www.wikiwand.com/en/List_of_algorithms#/Software_engineering)|[cache](https://www.wikiwand.com/en/Cache_replacement_policies), CHS, double dabble, Hash, Unicode, Xor swap|
 |...|
 
 
