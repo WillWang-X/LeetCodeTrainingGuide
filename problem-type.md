@@ -6,6 +6,22 @@ Every field of science has its **own problems** and needs **efficient** algorith
 
 Fields tend to overlap with each other, and algorithm advances in one field may improve those of other, sometimes completely unrelated, fields. For example, **dynamic programming** was invented for optimization of resource consumption in industry but is now used in solving a broad range of problems in many fields.
 
+There are 11 fields: 
+
+1. Automated planning 
+1. Combinatroial algorithms
+1. Computational mathematics
+1. Computational science
+1. Computer science
+1. Information theory and signal processing
+1. **Software engineering**: 
+1. Database algorithms
+1. Distributed systems algorithms
+1. Networking
+1. Operating systems algorithms
+
+
+
 | Field            | Algorithms   |
 | ----------          | ------------ |
 |[**Combinatorial**](https://www.wikiwand.com/en/Combinatorics)/3|General combinatorial, Graph, [Sequence](https://www.wikiwand.com/en/Sequences)|
