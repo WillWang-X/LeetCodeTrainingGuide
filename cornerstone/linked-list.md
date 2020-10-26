@@ -58,8 +58,8 @@ class ListNode:
 #### add (double)
 
 ``` python 
-# -> p -> tail
-# -> p -> node -> tail
+# ... <-> p <-> tail
+# ... <-> p <-> node <-> tail
 def _add(node):
 	p = tail.prev
 	p.next, node.prev = node, p
@@ -75,17 +75,29 @@ def xxxx(self, l1: ListNode, l2: ListNode) -> ListNode:
 	return dummy.next 
 ```
 
-### delete 
+#### delete 
 
 ``` python
 # to delete a node (except the tail) in a singly linked list, 
 # given only access to that node.
+# node -> next -> next.next 
+# next ---------> next.next
 def delete_node(self, node):
     node.val  = node.next.val
     node.next = node.next.next
 ```
 
-### kth(back)
+#### delete (double)
+
+``` python
+# pre_node <-> node <-> nxt_node
+# pre_node <-> nxt_node
+def delete(node):
+	pre_node, nxt_node = node.pre, node.nxt
+	pre_node.nxt, nxt_node.pre = nxt_node, pre_node
+```
+
+#### kth(back)
 
 ``` python
 def remove_Nth_from_end(head: ListNode, n: int) -> ListNode:
@@ -101,7 +113,7 @@ def remove_Nth_from_end(head: ListNode, n: int) -> ListNode:
     return head
 ```
  
-### middle
+#### middle
 
 ``` python
 def middle_node(self, head: ListNode) -> ListNode:
@@ -112,7 +124,7 @@ def middle_node(self, head: ListNode) -> ListNode:
     return slow
 ```
 
-### cycle 
+#### cycle 
 
 ``` python
 def has_cycle(head):
@@ -128,7 +140,7 @@ def has_cycle(head):
     return False 
 ```
 
-### reverse 
+#### reverse 
 
 ``` python
 def reverse_node(head):
@@ -143,7 +155,7 @@ def reverse_node(head):
 ```
 
 
-### reverse k 
+#### reverse k 
 
 ``` python
 def reverse_k_group(self, head: ListNode, k: int) -> ListNode:
@@ -168,7 +180,7 @@ def reverse_k_group(self, head: ListNode, k: int) -> ListNode:
 ```
 
 
-### merge
+#### merge
 
 ``` python
 def merge_two(l1: ListNode, l2: ListNode) -> ListNode:
@@ -179,9 +191,9 @@ def merge_two(l1: ListNode, l2: ListNode) -> ListNode:
     return l1 or l2 
 ```
 
-### merge k 
+#### merge k 
 
-### merge sort 
+#### merge sort 
 
 ``` python
 # merge sort
@@ -209,7 +221,7 @@ def sort_list(self, head):
 
 ## 😈4. More training
 
-
+* [2](https://leetcode.com/problems/add-two-numbers/). Add Two Numbers
 
 
 ## 💬5. Explanation
