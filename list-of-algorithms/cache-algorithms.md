@@ -5,6 +5,7 @@
 ## Why 
 
 * Space is limited you have to choose one to discard when the cache is full.
+* 优先级算法可以参考这个
 
 ## How
 
