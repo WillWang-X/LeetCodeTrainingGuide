@@ -66,25 +66,7 @@ def _add(node):
 	node.next, tail.prev = tail, node
 ```
 
-### add
-
-``` python
-def add_two_numbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-    carry = 0
-    n = dummy = ListNode(0)
-    while l1 or l2 or carry:
-        v1 = v2 = 0
-        if l1:
-            v1 += l1.val
-            l1 = l1.next 
-        if l2:
-            v2 += l2.val
-            l2 = l2.next 
-        carry, val = divmod(v1+v2+carry, 10)
-        n.next = ListNode(val)
-        n = n.next
-    return dummy.next 
-```
+#### dummy node
 
 ### delete 
 
