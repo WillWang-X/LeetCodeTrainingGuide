@@ -70,32 +70,6 @@ def group_anagrams(self, strs: List[str]) -> List[List[str]]:
     return list(ans.values())
 ```
 
-### LRU
-
-``` python
-class LRUCache:
-
-    def __init__(self, capacity: int):
-        self.cache = collections.OrderedDict()
-        self.capacity = capacity
-
-    def get(self, key: int) -> int:
-        if key not in self.cache: return -1
-        val = self.cache[key]
-        del self.cache[key]
-        self.cache[key] = val
-        return val
-
-    def put(self, key: int, value: int) -> None:
-        if key in self.cache:
-            del self.cache[key]
-        self.cache[key] = value
-        if len(self.cache) > self.capacity:
-            self.cache.popitem(last = False)
-            
-# implement your OrderedDict by (linkedlist + hashmap)    
-```
-
 ## 😈4. More training
 
 * 1 Two Sum
