@@ -9,7 +9,7 @@ Data Type
 </h1>
 
 
-> In computer science and computer programming, a data type or simply type is an **attribute** of data which tells the compiler or interpreter how the programmer intends to use the data. Most programming languages support basic data types of integer numbers, floating-point numbers, characters and Booleans. [[wiki](https://www.wikiwand.com/en/Data_type)]
+> In computer science and computer programming, a data type or simply type is an **attribute** of data which tells the compiler or interpreter how the programmer intends to **use** the data. Most programming languages support **basic data types** of integer numbers, floating-point numbers, characters and Booleans. [[wiki](https://www.wikiwand.com/en/Data_type)]
 
 Common data types include:
 
