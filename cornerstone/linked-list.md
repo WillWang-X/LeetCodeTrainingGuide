@@ -49,10 +49,10 @@ Algorithms operating on singly linked lists often benefit from using **two itera
 #### node class 
 
 ``` python 
-Class Node:
-	def __init__(self, val):
-		self.val = val
-		self.next = None 
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 ```
 
 #### add (double)
@@ -67,6 +67,13 @@ def _add(node):
 ```
 
 #### dummy node
+
+``` python
+def xxxx(self, l1: ListNode, l2: ListNode) -> ListNode:
+	dummy = cur = ListNode()
+	# do sth. with cur
+	return dummy.next 
+```
 
 ### delete 
 
