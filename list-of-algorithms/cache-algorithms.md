@@ -11,7 +11,7 @@
 1. Bélády's algorithm
 1. First in first out (FIFO)
 1. Last in first out (LIFO) or First in last out (FILO)
-1. **Least recently used (LRU)**
+1. **Least recently used (LRU)**: Discards the least recently used items first.
 1. Time aware least recently used (TLRU)
 1. Most recently used (MRU)
 1. Pseudo-LRU (PLRU)
