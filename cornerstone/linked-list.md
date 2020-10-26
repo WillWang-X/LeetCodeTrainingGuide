@@ -37,16 +37,8 @@ Algorithms operating on singly linked lists often benefit from using **two itera
 
 ## 🤺3. Best Practices
 
-- [create](https://repl.it/@WillWang42/linked-list)
-- insert (front, given node, end)
-- adding a dummy node ([LC117](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/), LC146)
-- add
-- deletiton: modify(values, LC450) or change(pointers)
-- sort([LC147](https://leetcode.com/problems/insertion-sort-list/description/)) 
-- recursively (reverse linked-list)
-- count, **reverse**, find the middle, merge
 
-#### node class 
+#### [node class](https://repl.it/@WillWang42/linked-list) 
 
 ``` python 
 class ListNode:
@@ -128,10 +120,6 @@ def middle_node(self, head: ListNode) -> ListNode:
 
 ``` python
 def has_cycle(head):
-    """
-    :type head: ListNode
-    :rtype: bool
-    """
     fast, slow = head, head 
     while fast and fast.next:
         fast, slow = fast.next.next, slow.next 
@@ -143,15 +131,15 @@ def has_cycle(head):
 #### reverse 
 
 ``` python
+"""
+   pre   -> cur -> cur.nxt 
+ cur.nxt <- pre <- cur 
+"""	
 def reverse_node(head):
 	pre, cur = None, head
 	while cur:
 		cur.next, pre, cur = pre, cur, cur.next 
 	return pre
-"""
-   pre   -> cur -> cur.nxt 
- cur.nxt <- pre <- cur 
-"""	
 ```
 
 
@@ -222,6 +210,10 @@ def sort_list(self, head):
 ## 😈4. More training
 
 * [2](https://leetcode.com/problems/add-two-numbers/). Add Two Numbers
+* [117](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/).
+* 146.
+* [147](https://leetcode.com/problems/insertion-sort-list/description/).
+* 450.
 
 
 ## 💬5. Explanation
