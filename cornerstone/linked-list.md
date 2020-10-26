@@ -46,7 +46,7 @@ Algorithms operating on singly linked lists often benefit from using **two itera
 - recursively (reverse linked-list)
 - count, **reverse**, find the middle, merge
 
-### node class 
+#### node class 
 
 ``` python 
 Class Node:
@@ -55,6 +55,16 @@ Class Node:
 		self.next = None 
 ```
 
+#### add (double)
+
+``` python 
+# -> p -> tail
+# -> p -> node -> tail
+def _add(node):
+	p = tail.prev
+	p.next, node.prev = node, p
+	node.next, tail.prev = tail, node
+```
 
 ### add
 
