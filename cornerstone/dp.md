@@ -31,44 +31,17 @@ Sometimes, **recursion may out-perform a bottom-up DP** solution, e.g., when the
 
 ## ⚔️2. Use cases
 
-- memoization
-- choices: [322](https://leetcode.com/problems/coin-change/description/)
-- add one variable: [1035](https://leetcode.com/problems/uncrossed-lines/)
-- more variables
-- sequence alignment 
-- shortest paths: [787](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
-- counting: [91](https://leetcode.com/problems/decode-ways/)
+* memoization
+* choices: [322](https://leetcode.com/problems/coin-change/description/), 120, 97, 174, [221 Matrix], 903, **322**
+* add one variable: [1035](https://leetcode.com/problems/uncrossed-lines/), 188, 474, 背包系列
+* more variables
+* sequence alignment: [300](https://leetcode.com/problems/longest-increasing-subsequence/description/) , 152
+* shortest paths: [787](https://leetcode.com/problems/cheapest-flights-within-k-stops/), 943
+* counting: [91](https://leetcode.com/problems/decode-ways/), 96, 16, 70
+* string: 5
+* DFS -> DP: 139, 678, 464 
+* 股票系列
 
----
-
-- [**Longest common subsequence**](https://leetcode.com/problems/uncrossed-lines/): top down or bottom up, O(n) - O(1)
-- choice: 120, 97, 174, [221 Matrix], 903, **322**
-- variable: 188, 474,
-- sequence aligment: [300](https://leetcode.com/problems/longest-increasing-subsequence/description/) , 152
-- shortest path: 943 
-- counting: 96, 16, 70, 96
-- string: 5 
-- DFS -> DP: 139, 678, 464 
-- 背包系列
-- 股票系列
-
-
-重叠子问题 选择 增加一个变量 多个变量 数列问题 最短路径
-
-* Fibonacci 经典型
-* Choices
-* Add variables (背包系列)
-* Sequence alignment
-* Shortest Paths
-
-Other:
-
-* ❶ Fibonacci 一步两步: f(n) = f(n-1) + f(n-2)
-* ❷ 96 Unique Binary Search Trees
-* ❸ Sequence alignment
-* ❹ Add variables (背包系列 🎒 )
-* ❺ choices
-* ❻ Maximum Product Subarray VS Maximum Sum Subarray
 
 ## 🤺3. Best Practices
 
@@ -132,9 +105,6 @@ def longest_common_subsquence(A: List[int], B: List[int]) -> int:
     return dp[m - 1, n - 1]
 ```
 
-- Try [516](https://leetcode.com/problems/longest-palindromic-subsequence/), [1035](https://leetcode.com/problems/uncrossed-lines/), 
-
-
 ## 😈4. More training
 
 - [1035. Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/): Typical! LCS
@@ -156,6 +126,12 @@ def longest_common_subsquence(A: List[int], B: List[int]) -> int:
 * 416 Partition Equal Subset Sum
 * 474 Ones and Zeroes
 * 600 Non-negative Integers without Consecutive Ones
+* [1035](https://leetcode.com/problems/uncrossed-lines/). Uncrossed Lines: top down or bottom up, O(n) - O(1)
+* [516](https://leetcode.com/problems/longest-palindromic-subsequence/)
+* [1035](https://leetcode.com/problems/uncrossed-lines/), 
+
+
+
 
 ## 💬5. Explanation 
 
