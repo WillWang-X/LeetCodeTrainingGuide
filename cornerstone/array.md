@@ -50,10 +50,10 @@ Sometimes it's easier to **simulate the specification**, than to analytically so
 	* prefix sum, [325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)
 	* two pointer, [209](https://leetcode.com/problems/minimum-size-subarray-sum/)
 	* sliding window, [992](https://leetcode.com/problems/subarrays-with-k-different-integers/)
-* **subsequence**: (duplicate, end with)
+* **subsequence**: (duplicate, **end with**)
 	* stack? 
 	* dfs, [491](https://leetcode.com/problems/increasing-subsequences/)
-	* dp, [300](https://leetcode.com/problems/longest-increasing-subsequence/)
+	* dp, [300](https://leetcode.com/problems/longest-increasing-subsequence/), [1239](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)
 	* greedy, [659](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
 
 ## 🤺3. Best Practices
