@@ -1,13 +1,15 @@
 # Matrix
 
-## 典型应用
+## 📝1. Basics
+
+## ⚔️2. Use cases
 
 - component: [island 系列](https://leetcode.com/problems/number-of-islands/)
 - shortest path: [maze 系列](https://leetcode.com/problems/the-maze/) 
 - simulation: [Spiral matrix 系列](https://leetcode.com/problems/spiral-matrix-iii/)
 - search: [240 search a 2D matrix](https://leetcode.com/problems/search-a-2d-matrix-ii/), [542](https://leetcode.com/problems/01-matrix/)
 
-## 最佳实践 Best practice 
+## 🤺3. Best Practices 
 
 - edge case 
 - seen
@@ -16,14 +18,14 @@
 - shortest path (heap)
 
 
-### edge case: [], [[]]
+#### edge case: [], [[]]
 
 ``` python 
 if not matrix or not matrix[0]:
 	return 0
 ```
 
-### visited / seen
+#### visited / seen
 
 ``` python
 if not matrix: 
@@ -33,7 +35,7 @@ C = len(matrix[0])
 seen = [[False] * C for _ in range(R)]
 ```
 
-### traversal
+#### traversal
 
 ``` python
 def max_increase_keeping_skyline(grid: List[List[int]]) -> int:
@@ -49,7 +51,7 @@ def max_increase_keeping_skyline(grid: List[List[int]]) -> int:
 
 - Try [807](https://leetcode.com/problems/max-increase-to-keep-city-skyline/)
 
-### get valid neighbors
+#### get valid neighbors
 
 ``` python 
 def neighbor(r, c): 
@@ -63,7 +65,7 @@ def unseen_neighbor(r, c):
 	        yield nr, nc    
 ```
 
-### get component 
+#### get component 
 
 ``` python
 # matrix[x][y] == 1
@@ -75,7 +77,7 @@ def dfs(x, y):
 	return 1 
 ```
 
-### shortest path 
+#### shortest path 
 
 ``` python
 def shortest_dist(maze: List[List[int]], start: List[int], destination: List[int]) -> int:
@@ -110,7 +112,7 @@ def neighbor(r, c, maze):
 
 - Try: [505](https://leetcode.com/problems/the-maze-ii/)
 
-## 木桩训练
+## 😈4. More training
 
 - [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
 - [378. Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
@@ -118,3 +120,7 @@ def neighbor(r, c, maze):
 - [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
 - [885. Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/)
 - [1030. Matrix Cells in Distance Order](https://leetcode.com/problems/matrix-cells-in-distance-order/)
+
+## 💬5. Explanation 
+
+## ⚠️6. FAQs 
