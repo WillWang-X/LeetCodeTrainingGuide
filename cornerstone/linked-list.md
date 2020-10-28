@@ -128,12 +128,12 @@ def has_cycle(head):
     return False 
 ```
 
-#### reverse 
+#### [reverse](https://leetcode.com/problems/reverse-linked-list/description/) 
 
 ``` python
 """
-   pre   -> cur -> cur.nxt 
- cur.nxt <- pre <- cur 
+   pre | cur -> cur.nxt 
+   x <-  pre |  cur 
 """	
 def reverse_node(head):
 	pre, cur = None, head
