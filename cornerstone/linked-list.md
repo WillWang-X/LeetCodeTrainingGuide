@@ -142,32 +142,6 @@ def reverse_node(head):
 	return pre
 ```
 
-
-#### reverse k 
-
-``` python
-def reverse_k_group(self, head: ListNode, k: int) -> ListNode:
-    # 1. edge case 
-    if k < 2: return head 
-    
-    # 2. base case 
-    node = head 
-    for _ in range(k):
-        if not node: 
-            return head
-        node = node.next 
-    
-    # 3. reverse 
-    pre, cur = None, head
-    for _ in range(k):
-        cur.next, pre, cur = pre, cur, cur.next 
-    
-    # 4. recursive 
-    head.next = reverse_k_group(cur, k)
-    return pre
-```
-
-
 #### merge
 
 ``` python
@@ -214,6 +188,8 @@ def sort_list(self, head):
 * 146.
 * [147](https://leetcode.com/problems/insertion-sort-list/description/).
 * 450.
+* [25](https://leetcode.com/problems/reverse-nodes-in-k-group/). Reverse Nodes in k-Group
+
 
 
 ## 💬5. Explanation
