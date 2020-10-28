@@ -1,9 +1,15 @@
-# String 
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/String-searching_algorithm">
+  <img src="https://i.imgur.com/5dFnxJZ.png" alt="string" width=42%">
+  </a>
+  <br><br>
+String
+  <br><br>
+</h1>
 
-<img src="https://i.imgur.com/1MzpsFt.png" alt="string" width="200"/> 
 
-
-## 基础知识
+## 📝1. Basics
 
 Similar to arrays, string problems often have simple brute-force solutions that use O(n) space solution, but subtler solutions that use the string itself to **reduce space** **complexity**.
 
@@ -11,7 +17,7 @@ Understand the implications of a string type which is **immutable**, e.g., the n
 
 Updating a mutable string from the front is slow, so see if it's possible to **write values from the back**.
 
-## 典型应用
+## ⚔️2. Use cases
 
 1. **anagram**: sort, hashmap or counter 
 2. **palindrome**: a == a[::-1] 
@@ -22,7 +28,7 @@ Updating a mutable string from the front is slow, so see if it's possible to **w
 	- wildcards, [10](https://leetcode.com/problems/regular-expression-matching/)
 5. **search**: trie, [212](https://leetcode.com/problems/word-search-ii/)
 
-## 最佳实践
+## 🤺3. Best Practices
 
 - counter 
 - trie 
@@ -95,14 +101,28 @@ def compute_prefix_function(pattern):
     return pi
 ```
 
-## 木桩训练
+## 😈4. More training
 
 - [6. ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)
 - [12. Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
 - [67. Add Binary](https://leetcode.com/problems/add-binary/)
 
 
-## More
+## 💬5. Explanation
 
 - [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)
 ](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/?from=groupmessage&isappinstalled=0): It does not make sense to have a string without knowing what encoding it uses. 
+
+
+## ⚠️6. FAQs
+
+#### Q: What are common string processing algorithms?
+
+A: Some [categories](https://www.wikiwand.com/en/String_(computer_science)#/String_processing_algorithms) of algorithms include:
+
+* String searching algorithms for finding a given substring or pattern
+* String **manipulation** algorithms
+* Sorting algorithms
+* Regular expression algorithms
+* Parsing a string
+* Sequence mining
