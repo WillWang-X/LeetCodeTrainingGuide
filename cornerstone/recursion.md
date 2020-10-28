@@ -1,8 +1,16 @@
-# Recursion 
 
-![Recursion](https://i.imgur.com/SAyEmMY.gif)
+<h1 align="center">
+<br>
+	<a href="https://www.wikiwand.com/en/Recursion">
+  <img src="https://i.imgur.com/SAyEmMY.gif" alt="recursion" width=42%">
+  </a>
+  <br><br>
+Recursion 
+  <br><br>
+</h1>
 
-## What？
+
+## 📝1. Basics
 
 ### 递归需要满足的三个条件
 
@@ -98,22 +106,35 @@ def fibonacci(n):
 	return res 
 ```
 
-## Q&A 
+## ⚔️2. Use cases
 
-### 1. 是不是所有的递归代码都可以改为这种迭代循环的非递归写法呢？
+* 推荐注册返佣金找到“最终推荐人”
+* 电影院询问自己是第几排？去的过程叫“**递**”，回来的过程叫“**归**”
 
-笼统地讲，是的。因为递归本身就是借助栈来实现的，只不过我们使用的栈是系统或者虚拟机本身提供的，我们没有感知罢了。如果我们自己在内存堆上实现栈，手动模拟入栈、出栈过程，这样任何递归代码都可以改写成看上去不是递归代码的样子。
+## 🤺3. Best Practices
+
+## 😈4. More training
+
+* [894. All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees/)
+
+## 💬5. Explanation 
+
+## ⚠️6. FAQs
+
+#### Q: 是不是所有的递归代码都可以改为这种迭代循环的非递归写法呢？
+
+A: 笼统地讲，是的。因为递归本身就是借助栈来实现的，只不过我们使用的栈是系统或者虚拟机本身提供的，我们没有感知罢了。如果我们自己在内存堆上实现栈，手动模拟入栈、出栈过程，这样任何递归代码都可以改写成看上去不是递归代码的样子。
 
 但是这种思路实际上是将递归改为了“手动”递归，本质并没有变，而且也并没有解决前面讲到的某些问题，徒增了实现的复杂度。
 
-### 2. 我们平时调试代码喜欢使用 IDE 的单步跟踪功能，像规模比较大、递归层次很深的递归代码，几乎无法使用这种调试方式。对于递归代码，你有什么好的调试方法呢？
+#### Q: 我们平时调试代码喜欢使用 IDE 的单步跟踪功能，像规模比较大、递归层次很深的递归代码，几乎无法使用这种调试方式。对于递归代码，你有什么好的调试方法呢？
 
-调试递归:
+A: 调试递归:
 
 1. 打印日志发现，递归值。
 2. 结合条件断点进行调试。
 
-### 3. 如何理解递归的执行过程？
+#### Q: 如何理解递归的执行过程？
 
 对于递归代码，若试图想清楚整个递和归的过程，实际上是进入了一个**思维误区**。
 
@@ -121,10 +142,11 @@ def fibonacci(n):
 
 因此，理解递归代码，就把它抽象成一个递推公式，不用想一层层的调用关系，不要试图用人脑去分解递归的每个步骤。
 
-### 4. Recursion vs Iteration?
+#### Q: Recursion vs Iteration?
 
 source: [geeksforgeeks](https://www.geeksforgeeks.org/difference-between-recursion-and-iteration/) - Read More
 
+A: 
 
 * **Time Complexity**: Finding the Time complexity of Recursion is more difficult than that of Iteration.
 * **Usage**: Usage of either of these techniques is a trade-off between time complexity and size of code. If time complexity is the point of focus, and number of recursive calls would be large, it is better to use iteration. However, if time complexity is not an issue and shortness of code is, recursion would be the way to go.
@@ -134,18 +156,4 @@ source: [geeksforgeeks](https://www.geeksforgeeks.org/difference-between-recursi
 
 
 
-## 木桩训练
 
-* [894. All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees/)
-* 
-
-## 实际应用
-
-* 推荐注册返佣金找到“最终推荐人”
-* 电影院询问自己是第几排？去的过程叫“**递**”，回来的过程叫“**归**”
-
-
-## Reference 
-
-* [10 | 递归：如何用三行代码找到“最终推荐人”
-](https://www.jianshu.com/p/54a83ba5d758)
