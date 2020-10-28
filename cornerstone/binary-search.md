@@ -1,7 +1,9 @@
 
 <h1 align="center">
 <br>
+	<a href="https://www.wikiwand.com/en/Binary_search_algorithm">
   <img src="https://i.imgur.com/7Wh8Jm3.gif" alt="binary search" width=42%">
+  </a>
   <br><br>
 Binary Search
   <br><br>
