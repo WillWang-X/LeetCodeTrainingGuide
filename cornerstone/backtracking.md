@@ -26,7 +26,37 @@ Backtracking
 
 ## 🤺3. Best Practices
 
-### path: permutation(visited)
+#### count 
+
+```
+	       []
+		/   |  \
+	   1   2    3
+	  / \   \
+	 2   3   3    
+ 	 |
+     3 
+```
+``` python
+def backtrack_count(self, num, depth):
+    if self._is_answer(depth): self.count += 1
+    if self._is_end(depth): return 
+    
+    self.visited.add(num)
+    for nxt in self.nums:
+        if self._can_move(num, nxt, self.visited):
+        	self.backtrack_count(nxt, depth+1)
+    self.visited.remove(num)
+    
+def _is_answer(self, depth):
+
+def _is_end(self, depth):
+
+def _can_move(self, cur, nxt, visited):    
+```
+
+
+#### path: permutation(visited)
 ``` python
 # remove `nums`, `res` if you write a nested function
 def backtrack(path, nums, res):
@@ -77,7 +107,7 @@ def permute(self, nums):
 ```
 
 
-### path: subset(order)
+#### path: subset(order)
 
 ``` python 
 # 1, 2, 3 
@@ -105,7 +135,7 @@ def backtrack(path, i, nums, res):
 
 - Try: [78](https://leetcode.com/problems/subsets/)
 
-### path: combination sum(early stop)
+#### path: combination sum(early stop)
 
 ``` python 
 # with duplicate 
@@ -122,7 +152,7 @@ def backtrack(path, i, target, res, nums):
 	return res 
 ```
 
-### path: palindrome partitioning(condition)
+#### path: palindrome partitioning(condition)
 
 ``` python 
 def backtrack(path, i, res, s):
