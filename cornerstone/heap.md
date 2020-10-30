@@ -23,12 +23,12 @@ A heap is a good choice when you need to compute the k **largest** or k **smalle
 
 ## ⚔️2. Use cases
 
-- first in, best out, [407](https://leetcode.com/problems/trapping-rain-water-ii/)
-- top / lowest k: [347](https://leetcode.com/problems/top-k-frequent-elements/description/)
-- shortest path: [787](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
-- merge k lists: [23](https://leetcode.com/problems/merge-k-sorted-lists/)
-- benchmark: [253](https://leetcode.com/problems/meeting-rooms-ii/)
-- keep poping 
+1. first in, best out, [407](https://leetcode.com/problems/trapping-rain-water-ii/)
+1. top / lowest k: [347](https://leetcode.com/problems/top-k-frequent-elements/description/)
+1. shortest path: [787](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+1. merge k lists: [23](https://leetcode.com/problems/merge-k-sorted-lists/)
+1. benchmark: [253](https://leetcode.com/problems/meeting-rooms-ii/)
+1. keep poping 
 
 ## 🤺3. Best Practices
 
@@ -147,10 +147,10 @@ def merge_k_lists(self, lists: List[ListNode]) -> ListNode:
 
 ## 😈4. More training
 
-- [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-- [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
-- [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
-
+* [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+* [218](https://leetcode.com/problems/the-skyline-problem/). The Skyline Problem
+* [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+* [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 ## 💬5. Explanation
 
 ## ⚠️6. FAQs
