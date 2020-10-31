@@ -5,7 +5,7 @@
   <img src="https://i.imgur.com/6ySsqlQ.gif" alt="Animation of Fortune's algorithm, a sweep line technique for constructing Voronoi diagrams" width=42%">
   </a>
   <br><br>
-Line Sweep algorithm
+Sweep Line algorithm
   <br><br>
 </h1>
 
@@ -43,3 +43,9 @@ The idea behind algorithms of this type is to imagine that **a line** (often a v
 
 ## ⚠️6. FAQs 
 
+#### Q: Any resources to learn more about sweep line algortihms?
+
+A: Here are some: 
+
+* [wsu: Any intersecting segments
+](https://eecs.wsu.edu/~cook/aa/lectures/l25/node10.html)
