@@ -34,6 +34,8 @@ The idea behind algorithms of this type is to imagine that **a line** (often a v
 * 1229 Meeting Scheduler	
 * 1272 Remove Interval
 * 1288 Remove Covered Intervals
+* [1589](https://leetcode.com/problems/maximum-sum-obtained-of-any-permutation/). Maximum Sum Obtained of Any Permutation
+
 
 
 ## 💬5. Explanation 
