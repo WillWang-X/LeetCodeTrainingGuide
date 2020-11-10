@@ -2,7 +2,7 @@
 
 ## Ideas
 
-DFS/BFS each land and toggle it. 
+Toggle each land(1->0) while DFS/BFS. 
 
 - DFS
 - BFS
