@@ -2,6 +2,13 @@
 
 ## Ideas
 
+do its part and recursively to reverse the rest part
+
+* edge case 
+* base case
+* reverse 
+* recursion
+
 ``` python
 head    |
  1 -> 2 -> 3 -> ...
@@ -9,6 +16,21 @@ head    |
 do reverse ( 1 -> 2 )  
 head.nxt = reverseKGroup(3 -> ...)
 return pre # (2 -> 1 -> ....)
+```
+
+## Exmaple 
+
+``` python
+# ListNode, int -> ListNode
+I: [1,2,3,4,5] 2
+O: [2,1,4,3,5]
+```
+
+``` python 
+1 -> 2 -> 3 -> 4 -> 5
+2 -> 1 -> ()
+2 -> 1 -> 4 -> 3 -> ()
+2 -> 1 -> 4 -> 3 -> 5 
 ```
 
 ## Code 
@@ -36,4 +58,12 @@ class Solution:
         head.next = self.reverseKGroup(cur, k)
         
         return pre
+```
+
+## Test 
+
+``` python
+[1,2], 2      -> [2,1]
+[1,2,3], 2    -> [2,1,3]
+[1,2,3,4], 2  -> [2,1,4,3]
 ```
