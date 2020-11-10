@@ -8,6 +8,22 @@ DP[i+1] = arr[i+1] | (each in DP[i])
 
 * The new combination is from arr[i+1] with each in combinations
 
+
+## Example 
+
+```
+I: arr = ["un","iq","ue"]
+O: 4
+```
+
+``` python
+# arr[i],  dp[i]
+{}         [set()]
+{'n', 'u'} [set(), {'n', 'u'}]
+{'q', 'i'} [set(), {'n', 'u'}, {'q', 'i'}, {'q', 'n', 'u', 'i'}]
+{'u', 'e'} [set(), {'n', 'u'}, {'q', 'i'}, {'q', 'n', 'u', 'i'}, {'u', 'e'}, {'q', 'i', 'u', 'e'}]
+```
+
 ## Code 
 
 ### v0.1
