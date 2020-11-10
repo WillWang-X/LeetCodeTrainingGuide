@@ -8,7 +8,7 @@
 
 ## Code 
 
-### v0.1 
+### [v](https://github.githistory.xyz/willwang-x/algorithms-2018/blob/master/problems/leetcode/146.md)0.1 
 
 ``` python 
 class LRUCache:
