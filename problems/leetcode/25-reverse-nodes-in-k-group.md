@@ -4,10 +4,10 @@
 
 do its part and recursively to reverse the rest part
 
-* edge case 
-* base case
-* reverse 
-* recursion
+* **edge case**: if `k` < 2   
+* **base case**: if we have k nodes
+* **reverse**: reverse k nodes 
+* **recursion**: reverseKgroup for the rest part
 
 ``` python
 head    |
