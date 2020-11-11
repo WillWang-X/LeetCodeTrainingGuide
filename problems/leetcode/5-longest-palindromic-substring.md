@@ -34,26 +34,6 @@ The base cases are:
 * P(i, i+1) = (S<sub>i</sub> = S<sub>i+1</sub>)
 
 
-``` python
-b _____ b 
-↑       ↑
-i       j     
-
-if s[i] == s[j] and is_palindrome(s[i+1:j]):
-	longest = j - i + 1
-	res = s[i:j+1]
-
------------
-
-   x x x x x 
-x  \
-x    \
-x      \ 
-x        \
-x          \
-
-```
-
 ## Example
 
 ``` python
@@ -64,6 +44,7 @@ O: "aba"
 ```
 
 ``` python
+# ababa -> ababa
 # i, j, string, boolean, reason
 2 4 aba    True   b/c-of b
 1 3 bab    True   b/c-of a
@@ -88,34 +69,36 @@ O: "aba"
 # Time: O(n^2) where n = len(s)
 # Space: O(n)
 
-class Solution(object):
-    def longestPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        def palindrome(left, right):
-            while left - 1 >= 0 and right + 1 < len(s) and s[left-1] == s[right+1]:
-                left -= 1
-                right += 1
-            len_ = right - left + 1
-            res = s[left:right+1]
-            return len_, res 
-
-        
-        longest = 0
-        pa_res = ""
-        for i, char in enumerate(s):
-            test = [(i, i)]
-            if i + 1 < len(s) and s[i+1] == char:
-                test.append((i, i+1))
-                
-            for left, right in test:
-                len_, pa = palindrome(left, right)
-                if len_ > longest:
-                    longest = len_
-                    pa_res = pa
-        return pa_res 
+class Solution:
+    def __init__(self):
+        self.longest = 0
+        self.res_pal = ""
+    
+    def longestPalindrome(self, s: str) -> str:
+        for i in range(len(s)):               
+            for left, right in self._cases(i, s):
+                length, palindrome = self._palindrome(left, right, s)
+                self._update(length, palindrome)
+        return self.res_pal 
+    
+    def _cases(self, i, s):
+        cases = [(i, i)]
+        if i + 1 < len(s) and s[i+1] == s[i]:
+            cases.append((i, i+1))
+        return cases
+    
+    def _palindrome(self, left, right, s):
+        while left - 1 >= 0 and right + 1 < len(s) and s[left-1] == s[right+1]:
+            left -= 1
+            right += 1
+        len_ = right - left + 1
+        res = s[left:right+1]
+        return len_, res 
+    
+    def _update(self, length, palindrome):
+        if length > self.longest:
+            self.longest = length
+            self.res_pal = palindrome
 ```
 
 ### v0.2 DP 
@@ -125,40 +108,44 @@ class Solution(object):
 # Space: O(N*N)
 
 class Solution:
+    def __init__(self):
+        self.result = []
+        self.longest = 0
+        self.palindromic = "" 
+    
     def longestPalindrome(self, s: str) -> str:
-        
-        if not s:
-            return ""
-        
-        longest = 1
-        palindromic = s[0]
-        result = [ ["False" for i in range(len(s))] for j in range(len(s)) ]
-        for i in range(len(s)):
-            result[i][i] = "True"
-
-        for i in range(len(s)-1):
-            if s[i] == s[i+1]:
-                result[i][i+1] = "True"
-                longest = 2
-                palindromic = s[i:i+2]
+        if not s: return ""
+        self._preprocess(s)
         
         for i in range(len(s)-2,-1,-1):
             for j in range(i+2,len(s)):
-                if s[i] == s[j] and result[i+1][j-1] == "True":
-                    result[i][j] = "True"
-                    if j-i+1 > longest:
-                        longest = j-i+1
-                        palindromic = s[i:j+1]
-                    print("{:<1} {:<1} {:<6} {:<6}".format(i, j, s[i:j+1], result[i][j]), "b/c-of", s[i+1:j])
-                else:
-                    print("{:<1} {:<1} {:<6} {:<6}".format(i, j, s[i:j+1], result[i][j]))
-                  
-        print("-"*10)
-        for i in range(len(result)):
-            # for j in range(i, len(result)):
-            print(["{:<1} {:<1} {:<6} {:<5}".format(i, j, s[i:j+1], result[i][j]) for j in range(len(result))] )
-                # print(s[i:j+1], result[i][j])
-        return palindromic 
+                if s[i] == s[j] and self.result[i+1][j-1] == True:
+                    self.result[i][j] = True
+                    self._update(i, j, s) 
+        return self.palindromic 
+    
+    def _update(self, i, j, s):
+        if j-i+1 > self.longest:
+            self.longest = j-i+1
+            self.palindromic = s[i:j+1]     
+
+    def _preprocess(self, s):
+        self.palindromic = s[0]
+        self.longest = 0
+        self.result = [ [False for i in range(len(s))] for j in range(len(s))]
+        
+        for i in range(len(s)):
+            self.result[i][i] = True
+        
+        for i in range(len(s)-1):
+            if s[i] == s[i+1]:
+                self.result[i][i+1] = True
+                self.longest = 2
+                self.palindromic = s[i:i+2]
 ```
 
 ## Test
+
+```
+"aaaa" -> "aaaa"
+```
