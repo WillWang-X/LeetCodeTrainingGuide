@@ -1,5 +1,19 @@
 # [218](https://leetcode.com/problems/the-skyline-problem/). The Skyline Problem
 
+## Problem
+
+Given the locations and height of all the [buildings](https://i.imgur.com/hn3ScjA.png), write a program to output the [skyline](https://i.imgur.com/gywyDNu.png) formed by these buildings collectively.
+
+``` python
+# list([Li,  Ri,  Hi ]) -> list([Xi,  Yi ])
+# list([int, int, int]) -> list([int, int])
+I: [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]
+O: [[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]
+```
+
+* **Skyline**: A city's skyline is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance.
+* **key points**: A key point is the left endpoint of a horizontal line segment. A list of "key points" (red dots in Figure B) in the format of [ [x1,y1], [x2, y2], [x3, y3], ... ] uniquely defines a skyline. 
+
 ## Ideas
 
 ### 1. Identify the change
@@ -46,6 +60,90 @@ def get_skyline(self, buildings):
 	* Add critical point if event is the highest
 	* remove event from Q
 
+## Example 
+
+``` python
+"""
+I: [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]] 
+O: [[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]
+"""
+----------
+points:  [(0, -1)] # x, y
+active:  [(0, inf)] # active-y, end_x
+----------
+x    y     end_x , [active-y, active_x]          
+----------------------------------------
+##  0
+2    -10   9     , [(0, inf)]                    
+2    -10   9     , [(-10, 9), (0, inf)]          
+----------
+cause :  active_height-y 10  != last_point_height-y -1  
+points:  [(0, -1), [2, 10]]
+--------------------
+##  1
+3    -15   7     , [(-10, 9), (0, inf)]          
+3    -15   7     , [(-15, 7), (0, inf), (-10, 9)]
+----------
+cause :  active_height-y 15  != last_point_height-y 10  
+points:  [(0, -1), [2, 10], [3, 15]]
+--------------------
+##  2
+5    -12   12    , [(-15, 7), (0, inf), (-10, 9)]
+5    -12   12    , [(-15, 7), (-12, 12), (-10, 9), (0, inf)]
+----------
+cause :  active_height-y 15  == last_point_height-y 15  
+points are still the same
+--------------------
+##  3
+7    0     0     , [(-15, 7), (-12, 12), (-10, 9), (0, inf)]
+7    0     0     , [(-12, 12), (0, inf), (-10, 9)]
+----------
+cause :  active_height-y 12  != last_point_height-y 15  
+points:  [(0, -1), [2, 10], [3, 15], [7, 12]]
+--------------------
+##  4
+9    0     0     , [(-12, 12), (0, inf), (-10, 9)]
+9    0     0     , [(-12, 12), (0, inf), (-10, 9)]
+----------
+cause :  active_height-y 12  == last_point_height-y 12  
+points are still the same
+--------------------
+##  5
+12   0     0     , [(-12, 12), (0, inf), (-10, 9)]
+12   0     0     , [(0, inf)]                    
+----------
+cause :  active_height-y 0   != last_point_height-y 12  
+points:  [(0, -1), [2, 10], [3, 15], [7, 12], [12, 0]]
+--------------------
+##  6
+15   -10   20    , [(0, inf)]                    
+15   -10   20    , [(-10, 20), (0, inf)]         
+----------
+cause :  active_height-y 10  != last_point_height-y 0   
+points:  [(0, -1), [2, 10], [3, 15], [7, 12], [12, 0], [15, 10]]
+--------------------
+##  7
+19   -8    24    , [(-10, 20), (0, inf)]         
+19   -8    24    , [(-10, 20), (0, inf), (-8, 24)]
+----------
+cause :  active_height-y 10  == last_point_height-y 10  
+points are still the same
+--------------------
+##  8
+20   0     0     , [(-10, 20), (0, inf), (-8, 24)]
+20   0     0     , [(-8, 24), (0, inf)]          
+----------
+cause :  active_height-y 8   != last_point_height-y 10  
+points:  [(0, -1), [2, 10], [3, 15], [7, 12], [12, 0], [15, 10], [20, 8]]
+--------------------
+##  9
+24   0     0     , [(-8, 24), (0, inf)]          
+24   0     0     , [(0, inf)]                    
+----------
+cause :  active_height-y 0   != last_point_height-y 8   
+points:  [(0, -1), [2, 10], [3, 15], [7, 12], [12, 0], [15, 10], [20, 8], [24, 0]]
+--------------------
+```
 
 ## Code 
 
