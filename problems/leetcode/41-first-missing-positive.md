@@ -73,21 +73,21 @@ class Solution:
 ``` python
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
-        m = len(nums)
-        i = j = 0
-        while i < m:
-            while nums[i] != "x" and 0 < nums[i] <= m and nums[nums[i]-1] != "x":
+        length = len(nums)
+        nums = self._mark(nums)
+        for i in range(length):
+            if nums[i] != "x": return i+1
+        return length + 1
+    
+    def _mark(self, nums):
+        i, length = 0, len(nums)
+        while i < length:
+            while nums[i] != "x" and 0 < nums[i] <= length and nums[nums[i]-1] != "x":
                 pos = nums[i] - 1
                 nums[pos], nums[i] = nums[i], nums[pos]
                 nums[pos] = "x"
             i += 1
-        
-        for i in range(m):
-            if nums[i] != "x":
-                return i+1
-        
-        return m+1
-    
+        return nums
 ```
 
 ## Test
