@@ -29,7 +29,7 @@ Clarification:
 ### BF - BFS
 
 * Collect all nodes that not are not completed filled by BFS
-* Insert to the first node in the `unfilled_list` and delete the parent if it is completed filled
+* Insert to the first node's child in the `unfilled_list` and delete the parent if it is completed filled
 
 ## 3. Example
 
