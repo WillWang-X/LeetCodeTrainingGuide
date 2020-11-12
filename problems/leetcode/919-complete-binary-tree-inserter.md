@@ -26,17 +26,26 @@ Clarification:
 
 ## 2. Ideas
 
-### [algorithm design paradigm](https://www.wikiwand.com/en/Algorithmic_paradigm) 
+### BF - BFS
 
-concise description about your idea
+* Collect all nodes that not are not completed filled by BFS
+* Insert to the first node in the `unfilled_list` and delete the parent if it is completed filled
 
 ## 3. Example
 
-dry run of your idea
+``` python
+    2
+   / \
+   2  4
+  /
+  5
+
+self.unfilled = [2, 4, 5]
+```
 
 ## 4. Code 
 
-### v0.1
+### v0.2
 
 ``` python
 # Definition for a binary tree node.
@@ -45,38 +54,38 @@ dry run of your idea
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class CBTInserter:
 
     def __init__(self, root: TreeNode):
-        self.root = root 
-        front = [root]
-        self.cur = []
-        self.p = 0 
-        while front:
-            nxt = []
-            for node in front:
-                if not node.left or not node.right:
-                    self.cur.append(node)
-                if node.left:
-                    nxt.append(node.left)
-                if node.right:
-                    nxt.append(node.right)
-            front = nxt 
+        self.unfilled = self._bfs(root)
+        self.root = root
 
     def insert(self, v: int) -> int:
-        nxt = TreeNode(v)
-        cur = self.cur[self.p]
-        if not cur.left:
-            cur.left = nxt
+        node = self.unfilled[0]
+        self.unfilled.append(TreeNode(v))
+        if not node.left:
+            node.left = self.unfilled[-1]
         else:
-            cur.right = nxt
-            self.p += 1
-        self.cur.append(nxt)
-        return cur.val
+            node.right = self.unfilled[-1]
+            self.unfilled.popleft()
+        return node.val
 
     def get_root(self) -> TreeNode:
-        return self.root         
-        
+        return self.root
+
+    def _bfs(self, root: TreeNode):
+        q = collections.deque([root])
+        unfilled = collections.deque()
+        while q:
+            node = q.popleft()
+            if not node.left or not node.right:
+                unfilled.append(node)
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        return unfilled
 
 # Your CBTInserter object will be instantiated and called as such:
 # obj = CBTInserter(root)
