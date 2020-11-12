@@ -1,28 +1,34 @@
-# 42. Trapping Rain Water
+# [42](https://leetcode.com/problems/trapping-rain-water/). Trapping Rain Water
 
 Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 
-![](https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png)
-
-The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!
-
-
-Example:
-
-```
-Input: [0,1,0,2,1,0,1,3,2,1,2,1]
-Output: 6
+``` python
+# n  heights  -> how much trapping rain water
+# list(int)   -> int
+I: [0,1,0,2,1,0,1,3,2,1,2,1]
+O: 6
 ```
 
-## Idea
+clarification:
 
-- Solution 1: DP + two pointers
-- SOlution 2: Stack
+* n == height.length
 
-## Code 
+## Ideas
+
+### S1: DP + two pointers
+
+* Find the **highest bar** first and keep track of the shorter one from both side. 
+	* If the new bar > the current bar, we update it.
+	* Otherwise, we count the difference as water.
 
 
-### version 0.1  DP + two pointers
+
+### S2: Stack
+
+
+## Exmaple
+
+### S1: DP + two pointers
 
 ``` python 
                      |
@@ -30,46 +36,28 @@ Output: 6
 |💧💧💧💧|💧💧💧💧 |
 ```
 
+## Code 
 
-- We won't lose any water when the height of the water is less than the shorter bar of two.
-- So, we can find the highest bar first and keep track of the shorter one from both side.
-	- If the new bar > the current bar, we update it.
-	- Otherwise, we count the difference as water. 
 
+### DP + two pointer (v0.1
 
 ``` python
 # Time: O(n) n = len(height)
 # Space: O(1)
 
-
 class Solution:
     def trap(self, height: List[int]) -> int:
-        if not height:
-            return 0
-        
-        def find_bar(height):
-            bar, b = -1, 0
-            for i, height in enumerate(height):
-                if height > bar:
-                    b, bar = i, height 
-            return bar, b
-            
-        bar, b = find_bar(height)
+        if len(height) <= 1: return 0
+        highest = max(height)
+        mark = height.index(highest)
+        return self.cal(height[:mark]) + self.cal(height[mark:][::-1])
+    
+    def cal(self, nums):
+        bar = 0
         water = 0
-        
-        left_bar = height[0]
-        for _, h in enumerate(height[:b]):
-            if h > left_bar:
-                left_bar = h
-            else:
-                water += left_bar - h
-        
-        right_bar = height[-1]
-        for _, h in enumerate(height[b+1:][::-1]):
-            if h > right_bar:
-                right_bar = h
-            else:
-                water += right_bar - h
+        for num in nums:
+            water += max(0, bar - num)
+            bar = max(num, bar)
         return water 
 ```
 
@@ -112,47 +100,8 @@ class Solution:
         return water 
 ```
 
-## Debug
-
-
-### wrong answer 
-
+## Test
 
 ```
 [2,1,0,2]
-```
-- Output: 1
-- Expected: 3  
-
-Why?
-
-- `stack[-1]` instead of `stack.pop()` cause we need to use stack[-1] in the next while loop
-
-Before:
-
-``` python 
-class Solution:
-    def trap(self, height: List[int]) -> int:
-        stack, water = [], 0
-        for right, bar in enumerate(height):
-            print(stack)
-            while stack and height[stack[-1]] < bar:
-                top = stack.pop()
-                if not stack: 
-                    break
-                left = stack.pop() # debug
-                distance = right - left - 1
-                bounded_height = min(height[left], bar) - height[top]
-                water += bounded_height * distance 
-                # print("water:", water)
-            stack.append(right)
-            # print(stack, water)
-            # print()
-        return water 
-```
-
-After:
-
-``` python
-                left = stack[-1]
 ```
