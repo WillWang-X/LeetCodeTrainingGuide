@@ -20,8 +20,9 @@ Clarification:
 
 ### Brute Force 
 
-* set(list)
-* traverse from 1 and if it is in our set until we find the first missing positive integer
+* **traverse** from 1 to **upper bound** and if the current element in our cache 
+* if not, we found the **answer**, which is the first missing positive integer
+* **cahce**: set(input) 
 
 ### Reduce & conquer x Greedy?
 
@@ -60,12 +61,12 @@ Clarification:
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         if not nums: return 1
-        up_bound = max(0, max(nums)+1)
+        upper_bound = max(0, max(nums)+1)
         cache = set(nums)
-        for i in range(1, up_bound):
+        for i in range(1, upper_bound):
             if i not in cache:
                 return i
-        return max(1, up_bound)
+        return max(1, upper_bound)
 ```
 
 ### Reduce & conquer x Greedy?
