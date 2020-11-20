@@ -13,7 +13,7 @@ No matter which programming language you use for programming, it is important to
 Selecting a **proper** design technique for algorithms is a **complex** but **important** task. Following are some of the main algorithm design techniques:
 
 
-* [Brute Force](https://www.wikiwand.com/en/Brute-force_search): DFS, BFS 
+* [Brute Force Search](https://www.wikiwand.com/en/Brute-force_search): DFS, BFS 
 * Divide and conquer, Dynamic programming, Greedy algorithm
 * [Prune and search](https://www.wikiwand.com/en/Prune_and_search) (Decrease & conquer, Binary search)
 * Transform and conquer
