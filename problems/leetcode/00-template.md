@@ -1,7 +1,18 @@
-# [id](link). problem name 
+<h1 align="center">
+<br>
+	<a href="https://leetcode.com/problemset/all/">
+  <img src="https://i.imgur.com/Z6sf5a1.png" alt="intuition of problem" width=42%">
+  </a>
+  <br><br>
+id. problem name  
+  <br><br>
+</h1>
 
 
-## 1. Problem 
+
+## What
+
+### Description
 
 One line description
 
@@ -12,26 +23,28 @@ I: ex.
 O: ex.
 ```
 
-Clarification: 
+### Clarification
 
 * Requirements: e.g. in-place 
 * Assumptions: e.g. sorted b/c Assumptions can kill your solution if they are incorrect.
 * Constraints: e.g. 0 <= value <= 104
 
-## 2. Ideas
+## How 
 
-### [algorithm design paradigm](https://www.wikiwand.com/en/Algorithmic_paradigm) 
+### Idea
+
+#### [algorithm design paradigm](https://www.wikiwand.com/en/Algorithmic_paradigm) 
 
 concise description about your idea
 
-## 3. Example
+### Example
 
 dry run of your idea
 
-## 4. Code 
+### Code
 
 in a modular way
 
-## 5. Test
+### Test
 
 edge case & corner case in the format of leetcode test input since you can just copy them all and test them at leetcode.com
